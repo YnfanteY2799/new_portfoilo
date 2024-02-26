@@ -1,5 +1,10 @@
-import { BackgroundBeamsDemo } from "@/components/ui/Backgrounds/Background";
+import { BeamsBackground, Navbr } from "@/components";
 
 export default function Home() {
-  return <BackgroundBeamsDemo></BackgroundBeamsDemo>;
+  return (
+    <>
+      <Navbr />
+      <BeamsBackground />
+    </>
+  );
 }
