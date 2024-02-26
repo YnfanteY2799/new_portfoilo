@@ -2,9 +2,9 @@
 
 import { Button } from "@nextui-org/react";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { type ReactNode, useEffect, useState } from "react";
 
-export default function ThemeSwitcher() {
+export default function ThemeSwitcher(): ReactNode {
   // Hooks
   const { theme, setTheme } = useTheme();
 
