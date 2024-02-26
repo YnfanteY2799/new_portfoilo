@@ -1,21 +1,30 @@
-import { BeamsBackground, CommonProviders, Navbr } from "@/components";
+import { BeamsBackground, CommonProviders, Navbr, ThemeProvider } from "@/components";
 import "@/css/globals.css";
 
 import type { ICommonLayoutProp } from "@/types";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   title: "YJ | Portfolio",
   description: "Main Page of Yj Dev Portfolio",
 };
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+};
+
 export default function RootLayout({ children }: Readonly<ICommonLayoutProp>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <Navbr />
-        <CommonProviders>{children}</CommonProviders>
-        <BeamsBackground />
+        <CommonProviders>
+          <Navbr />
+          {children}
+          <BeamsBackground />
+        </CommonProviders>
       </body>
     </html>
   );
