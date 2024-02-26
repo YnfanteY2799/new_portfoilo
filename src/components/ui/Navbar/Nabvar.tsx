@@ -8,10 +8,8 @@ import { NavOptions } from "@/utils";
 import Link from "next/link";
 
 export default function NavBar() {
-  let pathname = usePathname() || "/";
-
-  //   FIXME: Code for specific use, needs to be rethinked
-  if (pathname.includes("/Blog/")) pathname = "/Blog";
+  // Hooks
+  const pathname = usePathname();
 
   // State
   const [hoveredPath, setHoveredPath] = useState(pathname);

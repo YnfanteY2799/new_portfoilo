@@ -9,7 +9,7 @@ import type { ReactNode } from "react";
 export default function Providers({ children }: ICommonLayoutProp): ReactNode {
   return (
     <NextThemesProvider attribute="class" defaultTheme="black">
-      <NextUIProvider>{children}</NextUIProvider>;
+      <NextUIProvider>{children}</NextUIProvider>
     </NextThemesProvider>
   );
 }
