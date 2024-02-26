@@ -28,6 +28,10 @@ const config: Config = {
     },
   },
   darkMode: "class",
-  plugins: [nextui(), require("@tailwindcss/aspect-ratio"), addVariablesForColors],
+  plugins: [
+    nextui({ addCommonColors: true, defaultTheme: "dark" }),
+    require("@tailwindcss/aspect-ratio"),
+    addVariablesForColors,
+  ],
 };
 export default config;

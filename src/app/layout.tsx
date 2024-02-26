@@ -1,4 +1,4 @@
-import { CommonProviders } from "@/components";
+import { BeamsBackground, CommonProviders, Navbr } from "@/components";
 import "@/css/globals.css";
 
 import type { ICommonLayoutProp } from "@/types";
@@ -13,7 +13,9 @@ export default function RootLayout({ children }: Readonly<ICommonLayoutProp>) {
   return (
     <html lang="en" className="dark">
       <body>
+        <Navbr />
         <CommonProviders>{children}</CommonProviders>
+        <BeamsBackground />
       </body>
     </html>
   );
