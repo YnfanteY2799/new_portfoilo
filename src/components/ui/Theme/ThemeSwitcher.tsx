@@ -1,15 +1,23 @@
 "use client";
 
+import { Button } from "@nextui-org/react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 export default function ThemeSwitcher() {
-  const [mounted, setMounted] = useState(false);
+  // Hooks
   const { theme, setTheme } = useTheme();
 
-  useEffect(() => setMounted(true), []);
+  // State
+  const [mounted, setMounted] = useState(false);
 
+  // Simulate Server Render
+  useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
-  return <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>{theme} Mode</button>;
+  return (
+    <Button variant="bordered" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+      {theme}
+    </Button>
+  );
 }
