@@ -9,12 +9,12 @@ export default function BackgroundBeams({ className }: IClassNameComponent): Rea
   return (
     <div
       className={cn(
-        "absolute  h-full w-full inset-0 [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center",
+        "absolute h-full w-full inset-0 [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center",
         className
       )}
     >
       <svg
-        className=" z-0 h-full w-full pointer-events-none absolute"
+        className="z-0 h-full w-full pointer-events-none absolute"
         width="100%"
         height="100%"
         viewBox="0 0 696 316"
@@ -26,43 +26,43 @@ export default function BackgroundBeams({ className }: IClassNameComponent): Rea
           stroke="url(#paint0_radial_242_278)"
           strokeOpacity="0.05"
           strokeWidth="0.5"
-        ></path>
+        />
 
         {beansPaths.map((path, index) => (
           <motion.path
-            key={index}
             d={path}
-            stroke={`url(#linearGradient-${index})`}
+            key={index}
+            strokeWidth="0.7"
             strokeOpacity="0.4"
-            strokeWidth="0.5"
+            stroke={`url(#linearGradient-${index})`}
           />
         ))}
         <defs>
           {beansPaths.map((_, index) => (
             <motion.linearGradient
-              id={`linearGradient-${index}`}
               x1="100%"
               x2="100%"
               y1="100%"
               y2="100%"
               key={`gradient-${index}`}
+              id={`linearGradient-${index}`}
               animate={{
-                x1: ["0%", "100%"],
                 x2: ["0%", "95%"],
+                x1: ["0%", "100%"],
                 y1: ["0%", "100%"],
                 y2: ["0%", `${93 + Math.random() * 8}%`],
               }}
               transition={{
-                duration: Math.random() * 10 + 10,
-                ease: "easeInOut",
                 repeat: Infinity,
+                ease: "easeInOut",
                 delay: Math.random() * 10,
+                duration: Math.random() * 10 + 10,
               }}
             >
-              <stop stopColor="#18CCFC" stopOpacity="0"></stop>
-              <stop stopColor="#18CCFC"></stop>
-              <stop offset="32.5%" stopColor="#6344F5"></stop>
-              <stop offset="100%" stopColor="#AE48FF" stopOpacity="0"></stop>
+              <stop stopColor="#18CCFC" stopOpacity="0" />
+              <stop stopColor="#18CCFC" />
+              <stop offset="32.5%" stopColor="#6344F5" />
+              <stop offset="100%" stopColor="#AE48FF" stopOpacity="0" />
             </motion.linearGradient>
           ))}
 

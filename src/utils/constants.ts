@@ -69,3 +69,11 @@ export const NavOptions = [
     name: "blog",
   },
 ];
+
+export const SpringNavbarAnimation = {
+  damping: 9,
+  bounce: 0.25,
+  duration: 0.3,
+  type: "spring",
+  stiffness: 130,
+};

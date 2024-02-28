@@ -1,4 +1,4 @@
-import { BeamsBackground, CommonProviders, Navbr, ThemeProvider } from "@/components";
+import { BeamsBackground, CommonProviders, Navbr } from "@/components";
 import "@/css/globals.css";
 
 import type { ICommonLayoutProp } from "@/types";
