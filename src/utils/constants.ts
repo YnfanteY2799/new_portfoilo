@@ -1,3 +1,5 @@
+import type { TNavOption } from "@/types";
+
 export const beansPaths = [
   "M-380 -189C-380 -189 -312 216 152 343C616 470 684 875 684 875",
   "M-373 -197C-373 -197 -305 208 159 335C623 462 691 867 691 867",
@@ -51,20 +53,24 @@ export const beansPaths = [
   "M-37 -581C-37 -581 31 -176 495 -49C959 78 1027 483 1027 483",
 ];
 
-export const NavOptions = [
+export const NavOptions:Array<TNavOption> = [
   {
+    id: 0,
     path: "/",
     name: "home",
   },
   {
+    id: 1,
     path: "/About",
     name: "about",
   },
   {
+    id: 2,
     path: "/Projects",
     name: "projects",
   },
   {
+    id: 3,
     path: "/Blog",
     name: "blog",
   },
@@ -77,3 +83,9 @@ export const SpringNavbarAnimation = {
   type: "spring",
   stiffness: 130,
 };
+
+export const selectedFloatingSection =
+  "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-primary";
+
+export const nonSelectedFloatingSection =
+  "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5";

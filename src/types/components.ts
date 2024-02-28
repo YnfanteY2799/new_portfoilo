@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { TNavOption } from "./index.ts";
 
 export interface ICommonIconProps {
   name: string;
@@ -12,4 +13,8 @@ export interface ICommonLayoutProp {
 
 export interface IClassNameComponent {
   className?: string;
+}
+
+export interface IFloatingMenuProps {
+  sections?: Array<TNavOption>;
 }
