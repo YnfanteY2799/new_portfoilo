@@ -1,4 +1,4 @@
-import type { TNavOption } from "@/types";
+import type { TCommonLinkIcon, TNavOption } from "@/types";
 
 export const beansPaths = [
   "M-380 -189C-380 -189 -312 216 152 343C616 470 684 875 684 875",
@@ -53,7 +53,7 @@ export const beansPaths = [
   "M-37 -581C-37 -581 31 -176 495 -49C959 78 1027 483 1027 483",
 ];
 
-export const NavOptions:Array<TNavOption> = [
+export const NavOptions: Array<TNavOption> = [
   {
     id: 0,
     path: "/",
@@ -89,3 +89,5 @@ export const selectedFloatingSection =
 
 export const nonSelectedFloatingSection =
   "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5";
+
+export const socials: Array<TCommonLinkIcon> = [];

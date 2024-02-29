@@ -1,7 +1,7 @@
 "use client";
 import { NavOptions, SpringNavbarAnimation } from "@/utils";
 import ThemeSwitcher from "../Theme/ThemeSwitcher.tsx";
-import NavbarOptionIcon from "./NavbarOptionIcon.tsx";
+import NavbarOptionIcon from "../Icons/Navbar.tsx";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Divider } from "@nextui-org/react";
@@ -20,7 +20,7 @@ export default function NavBar() {
   useEffect(() => setHoveredPath(() => pathname), [pathname]);
 
   return (
-    <div className="border-b border-foreground p-[0.4rem] sticky z-[100] bg-background backdrop-blur-md">
+    <div className="p-[0.4rem] sticky z-[100] bg-transparent backdrop-blur-md">
       <nav className="w-full z-[100] rounded-lg">
         <div className="flex justify-between">
           <Link href="/" className="text-xl normal-case flex gap-1">
@@ -41,7 +41,7 @@ export default function NavBar() {
                   path === pathname
                     ? hoveredPath === path
                       ? "text-zinc-200"
-                      : "text-foreground"
+                      : "text-primary"
                     : "text-zinc-500"
                 }`}
                 href={path}
@@ -58,7 +58,7 @@ export default function NavBar() {
                     layoutId="navbar"
                     aria-hidden="true"
                     transition={SpringNavbarAnimation}
-                    className="absolute bottom-0 left-0 h-full w-full bg-stone-800/80 rounded-md -z-10"
+                    className="absolute bottom-0 left-0 h-full w-full bg-default rounded-md -z-10"
                   />
                 )}
               </Link>

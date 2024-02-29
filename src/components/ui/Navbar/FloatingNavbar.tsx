@@ -1,6 +1,6 @@
 import { Fragment, ReactElement, useEffect, useRef, useState } from "react";
 import { selectedFloatingSection, nonSelectedFloatingSection } from "@/utils";
-import NavbarOptionIcon from "./NavbarOptionIcon.tsx";
+import NavbarOptionIcon from "../Icons/Navbar.tsx";
 
 import type { IFloatingMenuProps } from "@/types";
 

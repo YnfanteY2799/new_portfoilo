@@ -5,3 +5,5 @@ export type TNavOption = {
   path: string;
   name: string;
 };
+
+export type TCommonLinkIcon = { link: string; icon: string };

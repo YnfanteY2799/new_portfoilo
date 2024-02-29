@@ -3,7 +3,7 @@ import type { TNavOption } from "./index.ts";
 
 export interface ICommonIconProps {
   name: string;
-  size: number;
+  size?: number;
   className?: string;
 }
 
@@ -17,4 +17,8 @@ export interface IClassNameComponent {
 
 export interface IFloatingMenuProps {
   sections?: Array<TNavOption>;
+}
+
+export interface IHeroSectionProps {
+  cv?: string;
 }

@@ -1,8 +1,8 @@
 "use client";
-
+import { MoonStars, SunHorizon } from "@phosphor-icons/react";
+import { type ReactNode, useEffect, useState } from "react";
 import { Button } from "@nextui-org/react";
 import { useTheme } from "next-themes";
-import { type ReactNode, useEffect, useState } from "react";
 
 export default function ThemeSwitcher(): ReactNode {
   // Hooks
@@ -11,13 +11,17 @@ export default function ThemeSwitcher(): ReactNode {
   // State
   const [mounted, setMounted] = useState(false);
 
+  // Functions
+  function handleToggle() {
+    setTheme(theme === "light" ? "dark" : "light");
+  }
+
   // Simulate Server Render
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
-
   return (
-    <Button variant="bordered" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-      {theme}
+    <Button variant="flat" onPress={handleToggle} isIconOnly size="md">
+      {theme === "light" ? <SunHorizon fill="yellow" size={26} /> : <MoonStars fill="cyan" size={26} />}
     </Button>
   );
 }
