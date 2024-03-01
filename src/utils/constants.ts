@@ -90,4 +90,10 @@ export const selectedFloatingSection =
 export const nonSelectedFloatingSection =
   "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5";
 
-export const socials: Array<TCommonLinkIcon> = [{ icon: "github", link: "" }];
+export const socials: Array<TCommonLinkIcon> = [
+  { icon: "github", link: "" },
+  { icon: "linkedin", link: "" },
+  { icon: "instagram", link: "" },
+  { icon: "MyAnimeList", link: "" },
+  { icon: "twitter", link: "" },
+];
