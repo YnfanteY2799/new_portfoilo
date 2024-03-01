@@ -15,9 +15,10 @@ export { default as SocialsIcons } from "./ui/Icons/Socials.tsx";
 export { default as HeroSection } from "./sections/Hero.tsx";
 
 // -> Socials
-export { default as MalIcon } from "./svg/social/MalIcon";
-export { default as DevIcon } from "./svg/social/DevToIcon";
-export { default as UpWorkIcon } from "./svg/social/UpWorkIcon";
-export { default as FreelanceIcon } from "./svg/social/FreelanceIcon";
-export { default as CodewarsIcon } from "./svg/social/CodewarsIcon";
-export { default as LeetCodeIcon } from "./svg/social/LeetCodeIcon";
+export { default as MalIcon } from "./svg/social/MalIcon.tsx";
+export { default as DevIcon } from "./svg/social/DevToIcon.tsx";
+export { default as UpWorkIcon } from "./svg/social/UpWorkIcon.tsx";
+export { default as GithubIcon } from "./svg/social/GithubIcon.tsx";
+export { default as CodewarsIcon } from "./svg/social/CodewarsIcon.tsx";
+export { default as LeetCodeIcon } from "./svg/social/LeetCodeIcon.tsx";
+export { default as FreelanceIcon } from "./svg/social/FreelanceIcon.tsx";
