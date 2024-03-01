@@ -18,7 +18,7 @@ export default function SocialIcons({ name, size, className }: ICommonIconProps)
     case "upwork":
       return <UpWorkIcon className={className} size={size} />;
     case "github":
-      return <GithubIcon className={className} size={size ?? 24} />;
+      return <GithubIcon className={className} size={size} />;
     default:
       return <></>;
   }

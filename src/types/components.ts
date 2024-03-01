@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { ButtonProps } from "@nextui-org/react";
+import type { ButtonProps, TooltipPlacement, TooltipProps } from "@nextui-org/react";
 import type { TCommonPlacements, TNavOption } from "./index.ts";
 
 export interface ICommonIconProps {
@@ -28,5 +28,6 @@ export interface IGenericIconSvg {
 export interface ITooltipButton extends ButtonProps {
   link?: string;
   name?: string;
-  position?: TCommonPlacements;
+  position?: TooltipPlacement;
+  tooltipColor?: "default" | "primary" | "secondary" | "success" | "warning" | "danger" | "foreground";
 }
