@@ -18,3 +18,8 @@ export interface IFloatingMenuProps {
 export interface IHeroSectionProps {
   cv?: string;
 }
+
+export interface IGenericIconSvg {
+  size?: number;
+  className?: string;
+}

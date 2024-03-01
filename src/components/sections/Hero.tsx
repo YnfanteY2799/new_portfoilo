@@ -13,17 +13,17 @@ export default function HeroSection({ cv = "" }: IHeroSectionProps): ReactNode {
     <section className="pt-10 mx-auto pb-14" id="Hero">
       <div className="container flex flex-col items-center px-5 py-24 mx-auto md:flex-row">
         <div className="flex flex-col items-center mb-16 text-center lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0">
-          <h1 className="mb-4 text-4xl title-font sm:text-5xl">Hi, I'm Yassett J. Ynfante</h1>
+          <h1 className="mb-4 text-4xl title-font font-local sm:text-5xl">Hi, I'm Yassett J. Ynfante</h1>
           <p className="mb-8 leading-relaxed text-xl">Js FullStack Developer</p>
 
           <div className="flex justify-center gap-6">
             <Link href={cv} target="_blank">
-              <Button size="lg" color="primary" variant="ghost">
+              <Button size="lg" radius="md" color="primary" variant="ghost">
                 Get My CV !
               </Button>
             </Link>
             <a href="#Contact">
-              <Button size="lg" color="default" variant="ghost">
+              <Button size="lg" radius="md" color="default" variant="ghost">
                 Get My CV !
               </Button>
             </a>

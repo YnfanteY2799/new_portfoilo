@@ -1,15 +1,18 @@
-import { Fragment, ReactElement, useEffect, useRef, useState } from "react";
+import { Fragment, ReactNode, useEffect, useRef, useState } from "react";
 import { selectedFloatingSection, nonSelectedFloatingSection } from "@/utils";
 import NavbarOptionIcon from "../Icons/Navbar.tsx";
 
 import type { IFloatingMenuProps } from "@/types";
 
-export default function Floating({ sections = [] }: IFloatingMenuProps): ReactElement {
+export default function Floating({ sections = [] }: IFloatingMenuProps): ReactNode {
   // State
   const [lastClicked, setLastClicked] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  // Ref's
   const floatingRef = useRef<HTMLElement>(null);
 
+  // Functions
   function handleShowFloat(): void {
     setIsOpen(!isOpen);
   }
@@ -19,24 +22,20 @@ export default function Floating({ sections = [] }: IFloatingMenuProps): ReactEl
     handleShowFloat();
   }
 
+  function checkIfClickedOutside({ target }: MouseEvent) {
+    if (isOpen && floatingRef.current && !floatingRef.current.contains(target as Node)) handleShowFloat();
+  }
+
+  // Effects
   useEffect(() => {
-    const checkIfClickedOutside = ({ target }: MouseEvent) => {
-      if (isOpen && floatingRef.current && !floatingRef.current.contains(target as Node)) {
-        handleShowFloat();
-      }
-    };
-
     document.addEventListener("mousedown", checkIfClickedOutside, { passive: true });
-
-    return () => {
-      document.removeEventListener("mousedown", checkIfClickedOutside);
-    };
+    return () => document.removeEventListener("mousedown", checkIfClickedOutside);
   }, [isOpen]);
 
   return (
     <nav
-      className="hidden z-20 lg:flex shrink-0 grow-0 justify-around gap-4 border-t bg-transparent p-2.5 shadow-lg backdrop-blur-lg fixed top-2/4 -translate-y-2/4 left-4 min-h-[auto] min-w-[64px] flex-col rounded-lg border border-orange-600"
       ref={floatingRef}
+      className="hidden z-20 lg:flex shrink-0 grow-0 justify-around gap-4 border-t bg-transparent p-2.5 shadow-lg backdrop-blur-lg fixed top-2/4 -translate-y-2/4 left-4 min-h-[auto] min-w-[64px] flex-col rounded-lg border border-orange-600"
     >
       {isOpen ? (
         sections.map(({ id, name }, ind) => (
