@@ -7,6 +7,7 @@ import Link from "next/link";
 
 import type { IHeroSectionProps } from "@/types";
 import type { ReactNode } from "react";
+import TooltipedButton from "../ui/Buttons/TooltipedButton";
 
 export default function HeroSection({ cv = "" }: IHeroSectionProps): ReactNode {
   return (
@@ -24,17 +25,13 @@ export default function HeroSection({ cv = "" }: IHeroSectionProps): ReactNode {
             </Link>
             <a href="#Contact">
               <Button size="lg" radius="md" color="default" variant="ghost">
-                Get My CV !
+                Contact Me !
               </Button>
             </a>
           </div>
           <div className="flex gap-3 pt-8 lg:gap-6">
             {socials.map(({ link, icon }, idx) => (
-              <div className="pb-1 tooltip tooltip-bottom" data-tip={icon} key={idx}>
-                <a href={link} rel="noopener noreferrer" target="_blank" className="btn btn-outline ">
-                  <SocialsIcons name={icon} />
-                </a>
-              </div>
+              <TooltipedButton key={idx} link={link} name={icon} position="bottom" />
             ))}
           </div>
         </div>

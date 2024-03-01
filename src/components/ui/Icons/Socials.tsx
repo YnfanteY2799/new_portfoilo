@@ -1,20 +1,22 @@
-"use client";
-
-import { Code, House, Info, NewspaperClipping } from "@phosphor-icons/react/dist/ssr";
+import { CodewarsIcon, DevIcon, FreelanceIcon, LeetCodeIcon, MalIcon, UpWorkIcon } from "@/components";
 
 import type { ReactNode } from "react";
 import type { ICommonIconProps } from "@/types";
 
 export default function SocialIcons({ name, size, className }: ICommonIconProps): ReactNode {
   switch (name.toLocaleLowerCase()) {
-    case "home":
-      return <House size={size} className={className} />;
-    case "about":
-      return <Info size={size} className={className} />;
-    case "projects":
-      return <Code size={size} className={className} />;
-    case "blog":
-      return <NewspaperClipping size={size} className={className} />;
+    case "codewars":
+      return <CodewarsIcon className={className} size={size} />;
+    case "devtols":
+      return <DevIcon className={className} size={size} />;
+    case "freelance":
+      return <FreelanceIcon className={className} size={size} />;
+    case "leetcode":
+      return <LeetCodeIcon className={className} size={size} />;
+    case "mal":
+      return <MalIcon className={className} size={size} />;
+    case "upwork":
+      return <UpWorkIcon className={className} size={size} />;
     default:
       return <></>;
   }

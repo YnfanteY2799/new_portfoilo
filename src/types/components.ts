@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
-import type { TNavOption } from "./index.ts";
+import type { ButtonProps } from "@nextui-org/react";
+import type { TCommonPlacements, TNavOption } from "./index.ts";
 
 export interface ICommonIconProps {
   name: string;
@@ -22,4 +23,10 @@ export interface IHeroSectionProps {
 export interface IGenericIconSvg {
   size?: number;
   className?: string;
+}
+
+export interface ITooltipButton extends ButtonProps {
+  link?: string;
+  name?: string;
+  position?: TCommonPlacements;
 }
