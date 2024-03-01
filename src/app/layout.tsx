@@ -1,4 +1,5 @@
 import { BeamsBackground, CommonProviders, Navbr } from "@/components";
+import localFont from "next/font/local";
 import "@/css/globals.css";
 
 import type { ICommonLayoutProp } from "@/types";
@@ -16,10 +17,16 @@ export const viewport: Viewport = {
   ],
 };
 
+const currentFont = localFont({
+  src: "../fonts/ArigatouGozaimasu.otf",
+  variable: "--font-local",
+  preload: true,
+});
+
 export default function RootLayout({ children }: Readonly<ICommonLayoutProp>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className={`${currentFont.variable}`}>
         <CommonProviders>
           <Navbr />
           {children}

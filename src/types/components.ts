@@ -8,13 +8,9 @@ export interface ICommonIconProps {
 }
 
 export interface ICommonLayoutProp {
-  children: ReactNode;
-}
-
-export interface IClassNameComponent {
   className?: string;
+  children?: ReactNode;
 }
-
 export interface IFloatingMenuProps {
   sections?: Array<TNavOption>;
 }
