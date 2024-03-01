@@ -3,24 +3,12 @@ import type { IGenericIconSvg } from "@/types";
 
 export default function TauriIcon({ size = 24, className }: IGenericIconSvg): ReactElement {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={size}
-      height={size}
-      className={className}
-      viewBox="0 0 256 289"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} className={className} viewBox="0 0 256 289">
       <path
         fill="#FFC131"
         d="M178.497 104.93c0 15.155-12.285 27.44-27.44 27.44c-15.153 0-27.438-12.285-27.438-27.44c0-15.153 12.285-27.438 27.439-27.438s27.439 12.285 27.439 27.439Z"
       />
-      <circle
-        cx="104.911"
-        cy="183.505"
-        r="27.439"
-        fill="#24C8DB"
-        transform="rotate(180 104.91 183.505)"
-      />
+      <circle cx="104.911" cy="183.505" r="27.439" fill="#24C8DB" transform="rotate(180 104.91 183.505)" />
       <path
         fill="#FFC131"
         d="M207.93 192.86a104.766 104.766 0 0 1-36.168 14.717a73.586 73.586 0 0 0 3.617-33.176c29.953-10.472 49.82-38.964 49.292-70.69c-.53-31.727-21.336-59.542-51.622-69.008c-30.286-9.467-63.23 1.546-81.733 27.324a122.227 122.227 0 0 0-40.16 11.723C64.86 29.536 105.956-.445 152.244.005c46.288.45 86.794 31.224 99.636 75.697c12.841 44.473-5.026 92.103-43.95 117.157ZM52.404 92.832l25.693 3.118a73.586 73.586 0 0 1 3.243-14.593a104.766 104.766 0 0 0-28.936 11.475Z"
