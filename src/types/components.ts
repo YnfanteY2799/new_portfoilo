@@ -31,3 +31,8 @@ export interface ITooltipButton extends ButtonProps {
   position?: TooltipPlacement;
   tooltipColor?: "default" | "primary" | "secondary" | "success" | "warning" | "danger" | "foreground";
 }
+
+export interface ICommonSectionWrapperProps {
+  id?: string;
+  children?: ReactNode;
+}

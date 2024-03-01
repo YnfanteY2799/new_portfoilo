@@ -14,6 +14,9 @@ export { default as SocialsIcons } from "./ui/Icons/Socials.tsx";
 /** Sections */
 export { default as HeroSection } from "./sections/Hero.tsx";
 
+/** Wrappers */
+export { default as SectionWrapper } from "./ui/Wrappers/Section.tsx";
+
 // -> Socials
 export { default as MalIcon } from "./svg/social/MalIcon.tsx";
 export { default as DevIcon } from "./svg/social/DevToIcon.tsx";
