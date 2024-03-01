@@ -1,5 +1,5 @@
 "use client";
-import { SocialsIcons } from "@/components";
+import { TooltipedButton } from "@/components";
 import { Button } from "@nextui-org/react";
 import { socials } from "@/utils";
 import Image from "next/image";
@@ -7,7 +7,6 @@ import Link from "next/link";
 
 import type { IHeroSectionProps } from "@/types";
 import type { ReactNode } from "react";
-import TooltipedButton from "../ui/Buttons/TooltipedButton";
 
 export default function HeroSection({ cv = "" }: IHeroSectionProps): ReactNode {
   return (

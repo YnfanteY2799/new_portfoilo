@@ -90,6 +90,22 @@ export const selectedFloatingSection =
 export const nonSelectedFloatingSection =
   "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5";
 
+export const TextVariants = {
+  hidden: {
+    y: -50,
+    opacity: 0,
+  },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      duration: 1.25,
+      delay: 0,
+    },
+  },
+};
+
 export const socials: Array<TCommonLinkIcon> = [
   { icon: "github", link: "" },
   { icon: "linkedin", link: "" },
