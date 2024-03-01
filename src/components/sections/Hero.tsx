@@ -29,9 +29,9 @@ export default function HeroSection({ cv = "" }: IHeroSectionProps): ReactNode {
               </Button>
             </a>
           </div>
-          <div className="flex gap-3 pt-8 lg:gap-6">
+          <div className="flex gap-3 pt-8 lg:gap-6 ml-2">
             {socials.map(({ link, icon }, idx) => (
-              <TooltipedButton key={idx} link={link} name={icon} position="bottom" />
+              <TooltipedButton key={idx} link={link} name={icon} position="bottom" variant="ghost" isIconOnly />
             ))}
           </div>
         </div>

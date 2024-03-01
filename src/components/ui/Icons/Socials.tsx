@@ -1,4 +1,5 @@
 import { CodewarsIcon, DevIcon, FreelanceIcon, LeetCodeIcon, MalIcon, UpWorkIcon } from "@/components";
+import { GithubLogo } from "@phosphor-icons/react/dist/ssr";
 
 import type { ReactNode } from "react";
 import type { ICommonIconProps } from "@/types";
@@ -17,6 +18,8 @@ export default function SocialIcons({ name, size, className }: ICommonIconProps)
       return <MalIcon className={className} size={size} />;
     case "upwork":
       return <UpWorkIcon className={className} size={size} />;
+    case "github":
+      return <GithubLogo className={className} size={size ?? 24} />;
     default:
       return <></>;
   }
