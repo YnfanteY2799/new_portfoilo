@@ -15,7 +15,6 @@ export default function HeroSection({ cv = "" }: IHeroSectionProps): ReactNode {
         <div className="flex flex-col items-center mb-16 text-center lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0">
           <h1 className="mb-4 text-4xl title-font font-local sm:text-5xl">Hi, I'm Yassett J. Ynfante</h1>
           <p className="mb-8 leading-relaxed text-xl">Js FullStack Developer</p>
-
           <div className="flex justify-center gap-6">
             <Link href={cv} target="_blank">
               <Button size="lg" radius="md" color="primary" variant="ghost">
