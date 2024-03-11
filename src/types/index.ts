@@ -6,4 +6,14 @@ export type TNavOption = {
   name: string;
 };
 
-export type TCommonLinkIcon = { link: string; icon: string };
+export type TCommonLinkIcon = {
+  link: string;
+  icon: string;
+};
+
+export type CommonAnimationProps = {
+  type: any;
+  delay: number;
+  duration: any;
+  direction: string;
+};

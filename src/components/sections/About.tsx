@@ -1,20 +1,21 @@
 "use client";
+import { commonAnimationDispatcher as cad } from "@/utils";
 import { SectionWrapper } from "@/components";
 import { motion } from "framer-motion";
 import SectionHeader from "./headers";
-import { fadeIn } from "@/utils";
 
+import type { ICommonSectionProps } from "@/types";
 import type { ReactElement } from "react";
 
-export default function AboutSection({ Text = "" }): ReactElement {
+export default function AboutSection({ text = "" }: ICommonSectionProps): ReactElement {
   return (
     <SectionWrapper id="About">
-      <SectionHeader Head="About Me" SubHead="Intro" MoreDetails="/About" />
+      <SectionHeader head="About Me" subHead="Intro" moreDetails="/About" />
       <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-primary text-[17px] max-w-3xl leading-[30px]"
+        variants={cad({ direction: "", type: "", delay: 0.1, duration: 1 }, "fadeIn")}
       >
-        {Text}
+        {text}
       </motion.p>
     </SectionWrapper>
   );

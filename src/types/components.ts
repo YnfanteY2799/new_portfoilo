@@ -1,6 +1,6 @@
-import type { ReactNode } from "react";
-import type { TNavOption } from "./index.ts";
 import type { ButtonProps, TooltipPlacement } from "@nextui-org/react";
+import type { TNavOption } from "./index.ts";
+import type { ReactNode } from "react";
 
 export interface ICommonIconProps {
   name: string;
@@ -38,7 +38,11 @@ export interface ICommonSectionWrapperProps {
 }
 
 export interface ISectionHeadProps {
-  Head?: string;
-  SubHead?: string;
-  MoreDetails?: string;
+  head?: string;
+  subHead?: string;
+  moreDetails?: string;
+}
+
+export interface ICommonSectionProps {
+  text?: string;
 }
