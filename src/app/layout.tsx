@@ -30,6 +30,7 @@ export default function RootLayout({ children }: Readonly<ICommonLayoutProp>) {
         <CommonProviders>
           <Navbr />
           {children}
+          <BeamsBackground />
         </CommonProviders>
       </body>
     </html>

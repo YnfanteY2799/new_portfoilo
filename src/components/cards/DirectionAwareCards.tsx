@@ -1,5 +1,4 @@
 "use client";
-
 import { type MouseEvent, type ReactNode, useRef, useState } from "react";
 import { DACVariants, DACtextVariants, cn } from "@/utils";
 import { AnimatePresence, motion } from "framer-motion";
@@ -63,8 +62,8 @@ export default function DirectionAwareHoverCard({ imageUrl, children, classNames
           >
             <Image
               alt="image"
-              width="1000"
-              height="1000"
+              width="200"
+              height="200"
               src={imageUrl}
               className={cn("h-full w-full object-cover scale-[1.15]", imageClassName)}
             />

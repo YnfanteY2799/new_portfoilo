@@ -49,7 +49,7 @@ export interface ICommonSectionProps {
 
 export interface IDACard {
   imageUrl: string;
-  children: ReactNode;
+  children?: ReactNode;
   classNames?: {
     className?: string;
     imageClassName?: string;
