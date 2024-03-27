@@ -30,3 +30,6 @@ export { default as TwitterIcon } from "./svg/social/TwitterIcon.tsx";
 export { default as CodewarsIcon } from "./svg/social/CodewarsIcon.tsx";
 export { default as LeetCodeIcon } from "./svg/social/LeetCodeIcon.tsx";
 export { default as FreelanceIcon } from "./svg/social/FreelanceIcon.tsx";
+
+// -> Cards
+export { default as DacCard } from "./cards/DirectionAwareCards.tsx";

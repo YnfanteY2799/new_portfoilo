@@ -29,13 +29,7 @@ export default function BackgroundBeams({ className }: ICommonLayoutProp): React
         />
 
         {beansPaths.map((path, index) => (
-          <motion.path
-            d={path}
-            key={index}
-            strokeWidth="0.7"
-            strokeOpacity="0.4"
-            stroke={`url(#linearGradient-${index})`}
-          />
+          <motion.path d={path} key={index} strokeWidth="0.7" strokeOpacity="0.4" stroke={`url(#linearGradient-${index})`} />
         ))}
         <defs>
           {beansPaths.map((_, index) => (

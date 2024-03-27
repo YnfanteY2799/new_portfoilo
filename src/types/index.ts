@@ -17,3 +17,5 @@ export type CommonAnimationProps = {
   duration: any;
   direction: string;
 };
+
+export type TCommonDirections = "top" | "bottom" | "left" | "right";

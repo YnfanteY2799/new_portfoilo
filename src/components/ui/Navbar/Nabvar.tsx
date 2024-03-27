@@ -25,6 +25,7 @@ export default function NavBar() {
         <div className="flex justify-between">
           <Link href="/" className="text-xl normal-case flex gap-1">
             <Image
+              priority
               width={10}
               height={10}
               alt="Page Logo"
@@ -38,11 +39,7 @@ export default function NavBar() {
               <Link
                 key={path}
                 className={`px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 hover:text-white ease-in ${
-                  path === pathname
-                    ? hoveredPath === path
-                      ? "text-zinc-200"
-                      : "text-primary"
-                    : "text-zinc-500"
+                  path === pathname ? (hoveredPath === path ? "text-zinc-200" : "text-primary") : "text-zinc-500"
                 }`}
                 href={path}
                 data-active={path === pathname}

@@ -46,3 +46,13 @@ export interface ISectionHeadProps {
 export interface ICommonSectionProps {
   text?: string;
 }
+
+export interface IDACard {
+  imageUrl: string;
+  children: ReactNode;
+  classNames?: {
+    className?: string;
+    imageClassName?: string;
+    childrenClassName?: string;
+  };
+}
