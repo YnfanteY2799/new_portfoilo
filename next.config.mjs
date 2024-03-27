@@ -11,8 +11,8 @@ const nextConfig = withNextIntl({
   redirects: async () => [
     {
       source: "/",
-      destination: "/en/Home",
-      permanent: true,
+      destination: "/en",
+      permanent: false,
     },
   ],
 });
