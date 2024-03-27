@@ -36,7 +36,7 @@ export default function HeroSection({ cv = "" }: IHeroSectionProps): ReactNode {
                 name={icon}
                 variant="ghost"
                 position="bottom"
-                tooltipColor="foreground"
+                tooltipColor="secondary"
               />
             ))}
           </div>
@@ -46,7 +46,7 @@ export default function HeroSection({ cv = "" }: IHeroSectionProps): ReactNode {
           <Image
             width={1200}
             height={200}
-            src="dudul.svg"
+            src="/dudul.svg"
             loading="eager"
             alt="Profile Pic"
             className="border rounded-lg "

@@ -1,10 +1,11 @@
+"use client";
 import { Fragment, ReactNode, useEffect, useRef, useState } from "react";
 import { selectedFloatingSection, nonSelectedFloatingSection } from "@/utils";
 import NavbarOptionIcon from "../Icons/Navbar.tsx";
 
 import type { IFloatingMenuProps } from "@/types";
 
-export default function Floating({ sections = [] }: IFloatingMenuProps): ReactNode {
+export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): ReactNode {
   // State
   const [lastClicked, setLastClicked] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState<boolean>(false);
