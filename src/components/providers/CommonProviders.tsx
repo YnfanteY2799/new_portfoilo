@@ -6,7 +6,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import type { ICommonLayoutProp } from "@/types";
 import type { ReactNode } from "react";
 
-export default function Providers({ children }: ICommonLayoutProp): ReactNode {
+export default function ThemeProvider({ children }: ICommonLayoutProp): ReactNode {
   return (
     <NextThemesProvider attribute="class" defaultTheme="black">
       <NextUIProvider>{children}</NextUIProvider>
