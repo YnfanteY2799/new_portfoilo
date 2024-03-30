@@ -2,7 +2,7 @@
 
 import withNextInt from "next-intl/plugin";
 
-const withNextIntl = withNextInt();
+const withNextIntl = withNextInt("./src/configs/i18n.ts");
 
 const nextConfig = withNextIntl({
   images: {
@@ -11,8 +11,13 @@ const nextConfig = withNextIntl({
   redirects: async () => [
     {
       source: "/",
-      destination: "/en",
-      permanent: false,
+      destination: "a",
+      permanent: true,
+    },
+    {
+      source: "/Home",
+      destination: "/en/Home",
+      permanent: true,
     },
   ],
 });
