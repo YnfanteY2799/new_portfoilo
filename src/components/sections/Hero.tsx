@@ -1,15 +1,14 @@
-"use client";
-
-import { TooltipedButton } from "@/components";
-import { Button } from "@nextui-org/react";
+import { TooltipedButton, Button } from "@/components";
+import { useTranslations } from "next-intl";
 import { socials } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
 
 import type { IHeroSectionProps } from "@/types";
-import type { ReactNode } from "react";
 
-export default function HeroSection({ cv = "" }: IHeroSectionProps): ReactNode {
+export default function HeroSection({ cv = "" }: IHeroSectionProps) {
+  const t = useTranslations("HomePage");
+
   return (
     <section className="pt-10 mx-auto pb-14" id="Hero">
       <div className="container flex flex-col items-center px-5 py-24 mx-auto md:flex-row">
@@ -19,7 +18,7 @@ export default function HeroSection({ cv = "" }: IHeroSectionProps): ReactNode {
           <div className="flex justify-center gap-6">
             <Link href={cv} target="_blank">
               <Button size="lg" radius="md" color="primary" variant="ghost">
-                Get My CV !
+                {t("get_cv")}
               </Button>
             </Link>
             <a href="#Contact">
@@ -29,9 +28,9 @@ export default function HeroSection({ cv = "" }: IHeroSectionProps): ReactNode {
             </a>
           </div>
           <div className="flex gap-3 pt-8 lg:gap-6 ml-2">
-            {socials.map(({ link, icon }, idx) => (
+            {socials.map(({ link, icon }, ix) => (
               <TooltipedButton
-                key={idx}
+                key={ix}
                 isIconOnly
                 link={link}
                 name={icon}

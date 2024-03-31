@@ -3,5 +3,5 @@ import { notFound } from "next/navigation";
 
 export default getRequestConfig(async ({ locale }) => {
   if (!["en", "es"].includes(locale as any)) notFound();
-  return { messages: (await import(`/public/intl/${locale}.json`)).default };
+  return { messages: (await import(`../Intl/${locale}.json`)).default };
 });

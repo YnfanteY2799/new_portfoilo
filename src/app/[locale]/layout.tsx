@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 };
 
 const currentFont = localFont({
-  src: "../fonts/ArigatouGozaimasu.otf",
+  src: "../../fonts/ArigatouGozaimasu.otf",
   variable: "--font-local",
   preload: true,
 });

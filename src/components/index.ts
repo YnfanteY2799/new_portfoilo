@@ -18,6 +18,7 @@ export { default as HeroSection } from "./sections/Hero.tsx";
 
 /** Buttons */
 export { default as TooltipedButton } from "./ui/Buttons/TooltipedButton.tsx";
+export { default as Button } from "./ui/Buttons/FixedButtons.tsx";
 
 /** Wrappers */
 export { default as SectionWrapper } from "./ui/Wrappers/Section.tsx";
