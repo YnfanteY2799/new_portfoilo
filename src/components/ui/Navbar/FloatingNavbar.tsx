@@ -18,7 +18,7 @@ export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): Rea
     setIsOpen(!isOpen);
   }
 
-  function handleSelectionClick(id: number) {
+  function handleSelectionClick(id: number): void {
     setLastClicked(id);
     handleShowFloat();
   }
@@ -36,7 +36,7 @@ export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): Rea
   return (
     <nav
       ref={floatingRef}
-      className="hidden z-20 lg:flex shrink-0 grow-0 justify-around gap-4 border-t bg-transparent p-2.5 shadow-lg backdrop-blur-lg fixed top-2/4 -translate-y-2/4 left-4 min-h-[auto] min-w-[64px] flex-col rounded-lg border border-orange-600"
+      className="hidden z-20 lg:flex shrink-0 grow-0 justify-around gap-4 border-t bg-transparent p-2.5 shadow-lg backdrop-blur-lg fixed top-2/4 -translate-y-2/4 left-4 min-h-[auto] min-w-[64px] flex-col rounded-lg border border-primary"
     >
       {isOpen ? (
         sections.map(({ id, path }, ind) => (
@@ -49,11 +49,11 @@ export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): Rea
               <NavbarIcons size={25} name={path} className="mt-1" />
               <small className="pt-1 text-xs font-medium text-center">{path}</small>
             </a>
-            {ind !== sections.length - 1 && <hr className="border-orange-600" />}
+            {ind !== sections.length - 1 && <hr className="border-primary" />}
           </Fragment>
         ))
       ) : (
-        <button onClick={handleShowFloat} className="flex flex-col items-center justify-center text-orange-600">
+        <button onClick={handleShowFloat} className="flex flex-col items-center justify-center text-primary">
           <NavbarIcons name="Menu" size={30} />
         </button>
       )}
