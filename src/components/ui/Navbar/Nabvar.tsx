@@ -3,13 +3,13 @@ import { NavOptions, SpringNavbarAnimation } from "@/utils";
 import ThemeSwitcher from "../Theme/ThemeSwitcher.tsx";
 import NavbarOptionIcon from "../Icons/Navbar.tsx";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { type ReactNode, useEffect, useState } from "react";
 import { Divider } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function NavBar() {
+export default function NavBar(): ReactNode {
   // Hooks
   const pathname = usePathname();
 
@@ -35,20 +35,20 @@ export default function NavBar() {
             <span className="pt-[5px]">| DEV</span>
           </Link>
           <div className="flex gap-2">
-            {NavOptions.map(({ path, name }) => (
+            {NavOptions.map(({ path }) => (
               <Link
                 key={path}
-                className={`px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 hover:text-white ease-in ${
-                  path === pathname ? (hoveredPath === path ? "text-zinc-200" : "text-primary") : "text-zinc-500"
-                }`}
                 href={path}
                 data-active={path === pathname}
                 onMouseOver={() => setHoveredPath(path)}
                 onMouseLeave={() => setHoveredPath(pathname)}
+                className={`px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 hover:text-white ease-in ${
+                  path === pathname ? (hoveredPath === path ? "text-zinc-200" : "text-primary") : "text-zinc-500"
+                }`}
               >
                 <div className="flex justify-between gap-2">
-                  <NavbarOptionIcon name={name} size={18} className="mt-1" />
-                  <span className="capitalize">{name}</span>
+                  <NavbarOptionIcon name={path} size={18} className="mt-1" />
+                  <span className="capitalize">{path}</span>
                 </div>
                 {path === hoveredPath && (
                   <motion.div

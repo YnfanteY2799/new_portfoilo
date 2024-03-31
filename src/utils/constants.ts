@@ -56,23 +56,19 @@ export const beansPaths = [
 export const NavOptions: Array<TNavOption> = [
   {
     id: 0,
-    path: "/",
-    name: "home",
+    path: "Home",
   },
   {
     id: 1,
-    path: "/About",
-    name: "about",
+    path: "About",
   },
   {
     id: 2,
-    path: "/Projects",
-    name: "projects",
+    path: "Projects",
   },
   {
     id: 3,
-    path: "/Blog",
-    name: "blog",
+    path: "Blog",
   },
 ];
 
