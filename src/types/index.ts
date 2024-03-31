@@ -18,3 +18,9 @@ export type CommonAnimationProps = {
 };
 
 export type TCommonDirections = "top" | "bottom" | "left" | "right";
+
+export type TFloatingNavOptions = {
+  id?: string;
+  icon?: string;
+  name?: string;
+};

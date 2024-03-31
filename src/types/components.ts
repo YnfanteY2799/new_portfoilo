@@ -1,5 +1,5 @@
 import type { ButtonProps, TooltipPlacement } from "@nextui-org/react";
-import type { TNavOption } from "./index.ts";
+import type { TFloatingNavOptions, TNavOption } from "./index.ts";
 import type { ReactNode } from "react";
 
 export interface ICommonIconProps {
@@ -17,9 +17,8 @@ export interface ICommonRSC {
   className?: string;
   children?: ReactNode;
 }
-
 export interface IFloatingMenuProps {
-  sections?: Array<TNavOption>;
+  sections?: Array<TFloatingNavOptions>;
 }
 
 export interface IGenericIconSvg {
@@ -57,4 +56,8 @@ export interface IDACard {
     imageClassName?: string;
     childrenClassName?: string;
   };
+}
+
+export interface IMovileNavbarProps {
+  options?: Array<TNavOption>;
 }

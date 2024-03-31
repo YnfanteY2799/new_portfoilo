@@ -36,25 +36,25 @@ export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): Rea
   return (
     <nav
       ref={floatingRef}
-      className="hidden z-20 lg:flex shrink-0 grow-0 justify-around gap-4 border-t bg-transparent p-2.5 shadow-lg backdrop-blur-lg fixed top-2/4 -translate-y-2/4 left-4 min-h-[auto] min-w-[64px] flex-col rounded-lg border border-primary"
+      className="hidden z-20 lg:flex shrink-0 grow-0 justify-around gap-4 border-t bg-transparent p-1.5 shadow-lg backdrop-blur-lg fixed top-2/4 -translate-y-2/4 left-4 min-h-[auto] min-w-[24px] flex-col rounded-lg border border-primary"
     >
       {isOpen ? (
-        sections.map(({ id, path }, ind) => (
-          <Fragment key={ind}>
+        sections.map(({ id, icon = "", name }, idx) => (
+          <Fragment key={idx}>
             <a
               href={`#${id}`}
-              onClick={() => handleSelectionClick(ind)}
-              className={lastClicked === ind ? selectedFloatingSection : nonSelectedFloatingSection}
+              onClick={() => handleSelectionClick(idx)}
+              className={lastClicked === idx ? selectedFloatingSection : nonSelectedFloatingSection}
             >
-              <NavbarIcons size={25} name={path} className="mt-1" />
-              <small className="pt-1 text-xs font-medium text-center">{path}</small>
+              <NavbarIcons size={25} name={icon} className="mt-1" />
+              <small className="pt-1 text-xs font-medium text-center">{name}</small>
             </a>
-            {ind !== sections.length - 1 && <hr className="border-primary" />}
+            {idx !== sections.length - 1 && <hr className="border-primary" />}
           </Fragment>
         ))
       ) : (
         <button onClick={handleShowFloat} className="flex flex-col items-center justify-center text-primary">
-          <NavbarIcons name="Menu" size={30} />
+          <NavbarIcons name="Menu" size={25} />
         </button>
       )}
     </nav>

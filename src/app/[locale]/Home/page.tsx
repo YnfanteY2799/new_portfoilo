@@ -1,4 +1,5 @@
 import { AboutSection, BeamsBackground, HeroSection, FloatingNavbar } from "@/components";
+import { homeSections } from "@/utils";
 
 import type { ReactNode } from "react";
 
@@ -7,7 +8,7 @@ export default function Home(): ReactNode {
     <BeamsBackground>
       <HeroSection />
       <AboutSection />
-      <FloatingNavbar />
+      <FloatingNavbar sections={homeSections} />
     </BeamsBackground>
   );
 }

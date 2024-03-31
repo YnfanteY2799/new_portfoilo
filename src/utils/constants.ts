@@ -1,4 +1,4 @@
-import type { TCommonLinkIcon, TNavOption } from "@/types";
+import type { TCommonLinkIcon, TNavOption, TFloatingNavOptions } from "@/types";
 
 export const { NEXT_PUBLIC_DRIVE_LINK: cv = "" } = process.env;
 
@@ -73,6 +73,8 @@ export const NavOptions: Array<TNavOption> = [
     path: "Blog",
   },
 ];
+
+export const homeSections: Array<TFloatingNavOptions> = [{ id: "Hero", icon: "Home", name: "start" }];
 
 export const SpringNavbarAnimation = {
   damping: 9,
