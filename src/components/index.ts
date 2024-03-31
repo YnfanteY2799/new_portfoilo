@@ -21,7 +21,8 @@ export { default as TooltipedButton } from "./ui/Buttons/TooltipedButton.tsx";
 export { default as Button } from "./ui/Buttons/FixedButtons.tsx";
 
 /**  Theme Switchers */
-export { default as ButtonThemeSwitcher } from "./ui/Theme/ThemeSwitcher.tsx";
+export { default as DropdownSwitchers } from "./ui/Switchers/ConfigDropdownsSwitchers.tsx";
+export { default as ButtonThemeSwitcher } from "./ui/Switchers/ThemeButtonSwitcher.tsx";
 
 /** Wrappers */
 export { default as SectionWrapper } from "./ui/Wrappers/Section.tsx";
