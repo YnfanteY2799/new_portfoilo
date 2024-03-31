@@ -1,4 +1,4 @@
-import { BeamsBackground, CommonProviders, Navbr } from "@/components";
+import { BeamsBackground, CommonProviders, Navbar } from "@/components";
 import localFont from "next/font/local";
 import "@/css/globals.css";
 
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: Readonly<ICommonLayoutProp>) {
     <html lang="en" suppressHydrationWarning>
       <body className={`${currentFont.variable}`}>
         <CommonProviders>
-          <Navbr />
+          <Navbar />
           {children}
           <BeamsBackground />
         </CommonProviders>

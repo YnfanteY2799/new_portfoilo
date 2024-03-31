@@ -9,9 +9,15 @@ export interface ICommonIconProps {
 }
 
 export interface ICommonLayoutProp {
+  children: ReactNode;
+  params: { locale: string };
+}
+
+export interface ICommonRSC {
   className?: string;
   children?: ReactNode;
 }
+
 export interface IFloatingMenuProps {
   sections?: Array<TNavOption>;
 }

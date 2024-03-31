@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { beansPaths, cn } from "@/utils";
 
 import type { ReactNode } from "react";
-import type { ICommonLayoutProp } from "@/types";
+import type { ICommonRSC } from "@/types";
 
-export default function BackgroundBeams({ className }: ICommonLayoutProp): ReactNode {
+export default function BackgroundBeams({ className = "" }: ICommonRSC): ReactNode {
   return (
     <div
       className={cn(

@@ -6,7 +6,7 @@ export { default as BeamsBackground } from "./ui/Backgrounds/Beams.tsx";
 
 /** Navbar */
 export { default as FloatingNavbar } from "./ui/Navbar/FloatingNavbar.tsx";
-export { default as Navbr } from "./ui/Navbar/Nabvar.tsx";
+export { default as Navbar } from "./ui/Navbar/Nabvar.tsx";
 
 /** Icons */
 export { default as SocialsIcons } from "./ui/Icons/Socials.tsx";
