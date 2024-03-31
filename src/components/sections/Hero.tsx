@@ -1,13 +1,12 @@
 import { TooltipedButton, Button } from "@/components";
 import { useTranslations } from "next-intl";
-import { socials } from "@/utils";
+import { socials, cv } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
 
-import type { IHeroSectionProps } from "@/types";
 import type { ReactNode } from "react";
 
-export default function HeroSection({ cv = "" }: IHeroSectionProps): ReactNode {
+export default function HeroSection(): ReactNode {
   // Hooks
   const t = useTranslations("Hero");
 

@@ -22,10 +22,6 @@ export interface IFloatingMenuProps {
   sections?: Array<TNavOption>;
 }
 
-export interface IHeroSectionProps {
-  cv?: string;
-}
-
 export interface IGenericIconSvg {
   size?: number;
   className?: string;
