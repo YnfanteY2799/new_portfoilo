@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
+    { media: "(prefers-color-scheme: dark)", color: "dark" },
   ],
 };
 
@@ -26,15 +26,14 @@ const currentFont = localFont({
 
 export default function RootLayout({ children, params }: Readonly<ICommonLayoutProp>): ReactNode {
   // Prop destructuring
-  const {} = params;
+  const { locale = "en" } = params;
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${currentFont.variable}`}>
         <CommonProviders>
           <Navbar />
           {children}
-          <BeamsBackground />
         </CommonProviders>
       </body>
     </html>
