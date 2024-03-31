@@ -36,7 +36,7 @@ export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): Rea
   return (
     <nav
       ref={floatingRef}
-      className="hidden z-20 lg:flex shrink-0 grow-0 justify-around gap-4 border-t bg-transparent p-1.5 shadow-lg backdrop-blur-lg fixed top-2/4 -translate-y-2/4 left-4 min-h-[auto] min-w-[24px] flex-col rounded-lg border border-primary"
+      className="hidden z-20 lg:flex shrink-0 grow-0 justify-around gap-4 border-t bg-transparent p-2.5 shadow-lg backdrop-blur-lg fixed top-2/4 -translate-y-2/4 left-4 min-h-[auto] min-w-[74px] flex-col rounded-lg border border-primary transition-all"
     >
       {isOpen ? (
         sections.map(({ id, icon = "", name }, idx) => (
@@ -44,7 +44,7 @@ export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): Rea
             <a
               href={`#${id}`}
               onClick={() => handleSelectionClick(idx)}
-              className={lastClicked === idx ? selectedFloatingSection : nonSelectedFloatingSection}
+              className={(lastClicked === idx ? selectedFloatingSection : nonSelectedFloatingSection) + " hover:text-orange-600"}
             >
               <NavbarIcons size={25} name={icon} className="mt-1" />
               <small className="pt-1 text-xs font-medium text-center">{name}</small>

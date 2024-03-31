@@ -74,7 +74,14 @@ export const NavOptions: Array<TNavOption> = [
   },
 ];
 
-export const homeSections: Array<TFloatingNavOptions> = [{ id: "Hero", icon: "Home", name: "start" }];
+export const homeSections: Array<TFloatingNavOptions> = [
+  { id: "Hero", icon: "Home", name: "start" },
+  { id: "About", icon: "About", name: "About" },
+  { id: "Tech", icon: "Tech", name: "Tech" },
+  { id: "Projects", icon: "Projects", name: "Projects" },
+  { id: "Experience", icon: "Experience", name: "Experience" },
+  { id: "Contact_Me", icon: "Contact_Me", name: "Contact Me" },
+];
 
 export const SpringNavbarAnimation = {
   damping: 9,
@@ -85,10 +92,10 @@ export const SpringNavbarAnimation = {
 };
 
 export const selectedFloatingSection =
-  "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-primary";
+  "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-primary hover:text-orange-600";
 
 export const nonSelectedFloatingSection =
-  "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5";
+  "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 hover:text-orange-600";
 
 export const TextVariants = {
   hidden: {

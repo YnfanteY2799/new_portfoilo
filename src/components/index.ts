@@ -13,6 +13,10 @@ export { default as SocialsIcons } from "./ui/Icons/Socials.tsx";
 export { default as NavbarIcons } from "./ui/Icons/Navbar.tsx";
 
 /** Sections */
+export { default as ExperienceSection } from "./sections/Experience.tsx";
+export { default as TechStacksSection } from "./sections/TechStacks.tsx";
+export { default as ProjectsSection } from "./sections/Projects.tsx";
+export { default as ContactSection } from "./sections/Contact.tsx";
 export { default as AboutSection } from "./sections/About.tsx";
 export { default as HeroSection } from "./sections/Hero.tsx";
 
