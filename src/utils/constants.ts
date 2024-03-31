@@ -76,11 +76,11 @@ export const NavOptions: Array<TNavOption> = [
 
 export const homeSections: Array<TFloatingNavOptions> = [
   { id: "Hero", icon: "Home", name: "start" },
-  { id: "About", icon: "About", name: "About" },
-  { id: "Tech", icon: "Tech", name: "Tech" },
-  { id: "Projects", icon: "Projects", name: "Projects" },
-  { id: "Experience", icon: "Experience", name: "Experience" },
-  { id: "Contact_Me", icon: "Contact_Me", name: "Contact Me" },
+  { id: "About", icon: "About", name: "about" },
+  { id: "Tech", icon: "Tech", name: "tech" },
+  { id: "Projects", icon: "Projects", name: "projects" },
+  { id: "Experience", icon: "Experience", name: "experience" },
+  { id: "Contact_Me", icon: "Contact_Me", name: "contact_me" },
 ];
 
 export const SpringNavbarAnimation = {
@@ -92,10 +92,16 @@ export const SpringNavbarAnimation = {
 };
 
 export const selectedFloatingSection =
-  "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-primary hover:text-orange-600";
+  "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 p-1.5 text-primary hover:text-orange-600";
 
 export const nonSelectedFloatingSection =
-  "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 hover:text-orange-600";
+  "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 p-1.5 hover:text-orange-600";
+
+export const floatingMenuOpenClassName =
+  "hidden z-20 md:flex shrink-0 grow-0 justify-around gap-4 bg-transparent p-1.8 shadow-lg backdrop-blur-2xl fixed top-2/4 -translate-y-2/4 left-5 min-h-[auto] min-w-[74px] flex-col rounded-lg border border-primary";
+
+export const floatingMenuCloseClassName =
+  "hidden z-20 md:flex shrink-0 grow-0 justify-around gap-4 bg-transparent p-1.5 shadow-lg backdrop-blur-2xl fixed top-2/4 -translate-y-2/4 left-5 min-h-[auto] min-w-[44px] flex-col rounded-lg border border-primary";
 
 export const TextVariants = {
   hidden: {
