@@ -5,8 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 import type { IHeroSectionProps } from "@/types";
+import type { ReactNode } from "react";
 
-export default function HeroSection({ cv = "" }: IHeroSectionProps) {
+export default function HeroSection({ cv = "" }: IHeroSectionProps): ReactNode {
+  // Hooks
   const t = useTranslations("Hero");
 
   return (
