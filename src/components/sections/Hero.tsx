@@ -25,7 +25,7 @@ export default function HeroSection({ cv = "" }: IHeroSectionProps): ReactNode {
             </Link>
             <a href="#Contact">
               <Button size="lg" radius="md" color="default" variant="ghost">
-                Contact Me !
+                {t("get_contact")}
               </Button>
             </a>
           </div>

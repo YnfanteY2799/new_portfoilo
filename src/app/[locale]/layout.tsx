@@ -4,6 +4,7 @@ import "@/css/globals.css";
 
 import type { ICommonLayoutProp } from "@/types";
 import type { Metadata, Viewport } from "next";
+import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "YJ | Portfolio",
@@ -23,7 +24,10 @@ const currentFont = localFont({
   preload: true,
 });
 
-export default function RootLayout({ children }: Readonly<ICommonLayoutProp>) {
+export default function RootLayout({ children, params }: Readonly<ICommonLayoutProp>): ReactNode {
+  // Prop destructuring
+  const {} = params;
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${currentFont.variable}`}>

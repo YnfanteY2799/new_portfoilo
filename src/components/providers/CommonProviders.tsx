@@ -8,7 +8,7 @@ import type { ReactNode } from "react";
 
 export default function ThemeProvider({ children }: ICommonRSC): ReactNode {
   return (
-    <NextThemesProvider attribute="class" defaultTheme="black">
+    <NextThemesProvider attribute="class" defaultTheme="dark">
       <NextUIProvider>{children}</NextUIProvider>
     </NextThemesProvider>
   );
