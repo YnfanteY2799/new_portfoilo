@@ -1,9 +1,9 @@
 "use client";
-import { NavOptions, SpringNavbarAnimation } from "@/utils";
-import ThemeSwitcher from "../Theme/ThemeSwitcher.tsx";
-import NavbarOptionIcon from "../Icons/Navbar.tsx";
-import { usePathname } from "next/navigation";
+
+import { ButtonThemeSwitcher, NavbarIcons } from "@/components";
 import { type ReactNode, useEffect, useState } from "react";
+import { NavOptions, SpringNavbarAnimation } from "@/utils";
+import { usePathname } from "next/navigation";
 import { Divider } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -13,11 +13,16 @@ export default function NavBar(): ReactNode {
   // Hooks
   const pathname = usePathname();
 
+  // Functions
+  function pathNameHandler(): string {
+    return pathname.split("/")[2] || pathname;
+  }
+
   // State
-  const [hoveredPath, setHoveredPath] = useState(pathname);
+  const [hoveredPath, setHoveredPath] = useState(pathNameHandler());
 
   // Effect for delete ui clipping
-  useEffect(() => setHoveredPath(() => pathname), [pathname]);
+  useEffect(() => setHoveredPath(() => pathNameHandler()), [pathname]);
 
   return (
     <div className="p-[0.4rem] sticky z-[100] bg-transparent backdrop-blur-md">
@@ -35,33 +40,37 @@ export default function NavBar(): ReactNode {
             <span className="pt-[5px]">| DEV</span>
           </Link>
           <div className="flex gap-2">
-            {NavOptions.map(({ path }) => (
-              <Link
-                key={path}
-                href={path}
-                data-active={path === pathname}
-                onMouseOver={() => setHoveredPath(path)}
-                onMouseLeave={() => setHoveredPath(pathname)}
-                className={`px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 hover:text-white ease-in ${
-                  path === pathname ? (hoveredPath === path ? "text-zinc-200" : "text-primary") : "text-zinc-500"
-                }`}
-              >
-                <div className="flex justify-between gap-2">
-                  <NavbarOptionIcon name={path} size={18} className="mt-1" />
-                  <span className="capitalize">{path}</span>
-                </div>
-                {path === hoveredPath && (
-                  <motion.div
-                    layoutId="navbar"
-                    aria-hidden="true"
-                    transition={SpringNavbarAnimation}
-                    className="absolute bottom-0 left-0 h-full w-full bg-default rounded-md -z-10"
-                  />
-                )}
-              </Link>
-            ))}
+            {NavOptions.map(({ path }, idx) => {
+              const isSelected = path === pathNameHandler();
+
+              return (
+                <Link
+                  key={idx}
+                  href={path}
+                  data-active={isSelected}
+                  onMouseOver={() => setHoveredPath(path)}
+                  onMouseLeave={() => setHoveredPath(pathname)}
+                  className={`px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 hover:text-white ease-in ${
+                    isSelected ? (hoveredPath === path ? "text-zinc-200" : "text-primary") : "text-zinc-500"
+                  }`}
+                >
+                  <div className="flex justify-between gap-2">
+                    <NavbarIcons name={path} size={18} className="mt-1" />
+                    <span className="capitalize">{path}</span>
+                  </div>
+                  {path === hoveredPath && (
+                    <motion.div
+                      layoutId="navbar"
+                      aria-hidden="true"
+                      transition={SpringNavbarAnimation}
+                      className="absolute bottom-0 left-0 h-full w-full bg-default rounded-md -z-10"
+                    />
+                  )}
+                </Link>
+              );
+            })}
             <Divider orientation="vertical" />
-            <ThemeSwitcher />
+            <ButtonThemeSwitcher />
           </div>
         </div>
       </nav>

@@ -18,10 +18,13 @@ export default function ThemeSwitcher(): ReactNode {
 
   // Simulate Server Render
   useEffect(() => setMounted(true), []);
+
+  // Inmediate Return due to non mount (Simple Client Side Validation)
   if (!mounted) return null;
+
   return (
     <Button variant="flat" onPress={handleToggle} isIconOnly size="md">
-      {theme === "light" ? <SunHorizon fill="yellow" size={26} /> : <MoonStars fill="cyan" size={26} />}
+      {theme === "light" ? <SunHorizon fill="yellow" size={25} /> : <MoonStars fill="cyan" size={25} />}
     </Button>
   );
 }

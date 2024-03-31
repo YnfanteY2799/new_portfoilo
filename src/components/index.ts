@@ -20,6 +20,9 @@ export { default as HeroSection } from "./sections/Hero.tsx";
 export { default as TooltipedButton } from "./ui/Buttons/TooltipedButton.tsx";
 export { default as Button } from "./ui/Buttons/FixedButtons.tsx";
 
+/**  Theme Switchers */
+export { default as ButtonThemeSwitcher } from "./ui/Theme/ThemeSwitcher.tsx";
+
 /** Wrappers */
 export { default as SectionWrapper } from "./ui/Wrappers/Section.tsx";
 
