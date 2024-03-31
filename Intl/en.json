@@ -1,5 +1,8 @@
 {
-     "HomePage": {
-          "get_cv": "Get My Cv!"
+     "Hero": {
+          "welcome": "Hi, I'm Yassett J. Ynfante",
+          "get_cv": "Get My Cv !",
+          "get_contact": "Contact Me !",
+          "dev_title": "FullStack Developer"
      }
 }

@@ -1,5 +1,8 @@
 {
-     "HomePage": {
-          "get_cv": "Descargar mi Cv!"
+     "Hero": {
+          "welcome": "Hola, Soy Yassett J. Ynfante",
+          "get_cv": "¡Consigue mi CV!",
+          "get_contact": "¡Ponte en contacto conmigo!",
+          "dev_title": "Desarrollador FullStack"
      }
 }
