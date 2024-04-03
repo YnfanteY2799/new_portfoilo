@@ -51,8 +51,12 @@ export default function NavBar(): ReactNode {
                 data-active={path === actualPath}
                 onMouseOver={() => setHoveredPath(path)}
                 onMouseLeave={() => setHoveredPath(actualPath)}
-                className={`px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 hover:text-white ease-in ${
-                  path === actualPath ? (hoveredPath === path ? "text-zinc-200" : "text-primary") : "text-zinc-500"
+                className={`transition-colors px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 hover:text-white ease-in ${
+                  path === actualPath
+                    ? hoveredPath === path
+                      ? "text-primary dark:text-zinc-200"
+                      : "text-primary"
+                    : "text-zinc-500"
                 }`}
               >
                 <div className="flex justify-between gap-2">
@@ -70,7 +74,7 @@ export default function NavBar(): ReactNode {
               </Link>
             ))}
             <Divider orientation="vertical" />
-            <div className="py-1">
+            <div className="pt-[6px]">
               <ButtonThemeSwitcher />
             </div>
           </div>
