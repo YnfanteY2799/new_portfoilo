@@ -30,7 +30,7 @@ export default function NavBar(): ReactNode {
 
   return (
     <div className="p-[0.4rem] sticky z-[100] bg-transparent backdrop-blur-md border-b border-b-foreground dark:border-none">
-      <nav className="w-full z-[100] rounded-lg">
+      <nav className="w-full z-[100] rounded-lg px-2">
         <div className="flex justify-between">
           <Link href="/" className="text-xl normal-case flex gap-1">
             <Image
@@ -43,7 +43,7 @@ export default function NavBar(): ReactNode {
             />
             <span className="pt-[5px]">| DEV</span>
           </Link>
-          <div className="md:flex gap-2 hidden">
+          <div className="md:flex gap-2 hidden ">
             {NavOptions.map(({ path }, idx) => (
               <Link
                 key={idx}

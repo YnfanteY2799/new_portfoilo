@@ -23,8 +23,7 @@ export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): Rea
   }
 
   function handleNavClick() {
-    if (isOpen) return;
-    handleShowMenu();
+    !isOpen && handleShowMenu();
   }
 
   function checkIfClickedOutside({ target }: MouseEvent): void {
