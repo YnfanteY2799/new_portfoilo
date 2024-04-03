@@ -5,7 +5,7 @@ export { default as CommonProviders } from "./providers/CommonProviders.tsx";
 export { default as BeamsBackground } from "./ui/Backgrounds/Beams.tsx";
 
 /** Navbar */
-export { default as FloatingNavbar } from "./ui/Navbar/FloatingMenu/FloatingNavbar.tsx";
+export { default as FloatingNavbar } from "./ui/Navbar/FloatingMenu/index.tsx";
 export { default as Navbar } from "./ui/Navbar/Nabvar.tsx";
 
 /** Icons */

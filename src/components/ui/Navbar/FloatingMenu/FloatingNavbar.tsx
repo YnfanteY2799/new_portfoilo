@@ -4,10 +4,12 @@ import { cn, floatingMenuItem, useGetUrlHash } from "@/utils";
 import { FloatingIcons } from "@/components";
 
 import type { IFloatingMenuProps } from "@/types";
+import { useTranslations } from "next-intl";
 
 export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): ReactNode {
   // Hooks
   const pathash = useGetUrlHash();
+  const t = useTranslations();
 
   // State
   const [activeSection, setActiveSection] = useState<string | undefined>(undefined);
@@ -35,6 +37,7 @@ export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): Rea
     return () => document.removeEventListener("mousedown", checkIfClickedOutside);
   }, [isOpen]);
 
+  // Hash changes reflect effect
   useEffect(() => setActiveSection(pathash), [pathash]);
 
   return (
@@ -52,7 +55,7 @@ export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): Rea
             className={cn(floatingMenuItem, activeSection === id ? " text-primary" : " hover:text-orange-500")}
           >
             <FloatingIcons size={21} name={icon} className="mt-1" />
-            <small className="text-xs font-medium text-center">{name}</small>
+            <small className="text-xs font-medium text-center">{t(name)}</small>
           </a>
         ))
       ) : (

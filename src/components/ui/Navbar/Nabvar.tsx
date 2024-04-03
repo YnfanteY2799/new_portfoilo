@@ -78,7 +78,7 @@ export default function NavBar(): ReactNode {
               <ButtonThemeSwitcher />
             </div>
           </div>
-          <MobileNavbar />
+          <MobileNavbar options={NavOptions} />
         </div>
       </nav>
     </div>
