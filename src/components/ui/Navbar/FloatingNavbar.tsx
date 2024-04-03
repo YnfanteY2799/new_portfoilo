@@ -35,12 +35,7 @@ export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): Rea
     return () => document.removeEventListener("mousedown", checkIfClickedOutside);
   }, [isOpen]);
 
-  useEffect(() => {
-    setActiveSection(pathash);
-  }, [pathash]);
-
-
-  console.log(pathash)
+  useEffect(() => setActiveSection(pathash), [pathash]);
 
   return (
     <nav
@@ -56,13 +51,13 @@ export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): Rea
             onClick={handleShowMenu}
             className={cn(floatingMenuItem, activeSection === id ? " text-primary" : " hover:text-orange-500")}
           >
-            <NavbarIcons size={25} name={icon} className="mt-1" />
-            <small className="pt-[0.5px] text-xs font-medium text-center">{name}</small>
+            <NavbarIcons size={22} name={icon} className="mt-1" />
+            <small className="text-xs font-medium text-center">{name}</small>
           </a>
         ))
       ) : (
         <button className="flex flex-col items-center justify-center text-primary">
-          <NavbarIcons name="Menu" size={25} />
+          <NavbarIcons name="Menu" size={22} />
         </button>
       )}
     </nav>
