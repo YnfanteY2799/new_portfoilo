@@ -13,7 +13,7 @@ import {
 import type { ReactNode } from "react";
 import type { ICommonIconProps } from "@/types";
 
-export default function SocialIcons({ name, size, className }: ICommonIconProps): ReactNode {
+export default function SocialIcons({ name = "", size, className }: ICommonIconProps): ReactNode {
   switch (name.toLocaleLowerCase()) {
     case "codewars":
       return <CodewarsIcon className={className} size={size} />;

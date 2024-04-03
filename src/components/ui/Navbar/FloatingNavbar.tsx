@@ -1,7 +1,7 @@
 "use client";
 import { type ReactNode, useEffect, useRef, useState } from "react";
 import { cn, floatingMenuItem, useGetUrlHash } from "@/utils";
-import { NavbarIcons } from "@/components";
+import { FloatingIcons } from "@/components";
 
 import type { IFloatingMenuProps } from "@/types";
 
@@ -21,7 +21,7 @@ export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): Rea
     setIsOpen(!isOpen);
   }
 
-  function handleNavClick() {
+  function handleNavClick(): void {
     !isOpen && handleShowMenu();
   }
 
@@ -51,13 +51,13 @@ export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): Rea
             onClick={handleShowMenu}
             className={cn(floatingMenuItem, activeSection === id ? " text-primary" : " hover:text-orange-500")}
           >
-            <NavbarIcons size={22} name={icon} className="mt-1" />
+            <FloatingIcons size={21} name={icon} className="mt-1" />
             <small className="text-xs font-medium text-center">{name}</small>
           </a>
         ))
       ) : (
         <button className="flex flex-col items-center justify-center text-primary">
-          <NavbarIcons name="Menu" size={22} />
+          <FloatingIcons name="menu" size={20} />
         </button>
       )}
     </nav>

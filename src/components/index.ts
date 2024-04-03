@@ -9,6 +9,7 @@ export { default as FloatingNavbar } from "./ui/Navbar/FloatingNavbar.tsx";
 export { default as Navbar } from "./ui/Navbar/Nabvar.tsx";
 
 /** Icons */
+export { default as FloatingIcons } from "./ui/Icons/Floating.tsx";
 export { default as SocialsIcons } from "./ui/Icons/Socials.tsx";
 export { default as NavbarIcons } from "./ui/Icons/Navbar.tsx";
 

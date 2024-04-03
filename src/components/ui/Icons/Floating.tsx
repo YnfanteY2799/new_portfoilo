@@ -3,7 +3,7 @@ import { List, Code, House, Info, NewspaperClipping, Cake, Circuitry, AddressBoo
 import type { ReactNode } from "react";
 import type { ICommonIconProps } from "@/types";
 
-export default function NavbarIcons({ name = "", size, className }: ICommonIconProps): ReactNode {
+export default function FloatingIcons({ name = "", size, className }: ICommonIconProps): ReactNode {
   switch (name.toLocaleLowerCase()) {
     case "home":
       return <House size={size} className={className} />;
