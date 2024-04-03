@@ -1,35 +1,34 @@
 "use client";
+import { cn, floatingMenuClassName, floatingMenuItem } from "@/utils";
 import { type ReactNode, useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { NavbarIcons } from "@/components";
-import {
-  selectedFloatingSection,
-  floatingMenuOpenClassName,
-  floatingMenuCloseClassName,
-  nonSelectedFloatingSection,
-} from "@/utils";
 
 import type { IFloatingMenuProps } from "@/types";
 
 export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): ReactNode {
+  // Hooks
+  const pathname = usePathname();
+
   // State
-  const [lastClicked, setLastClicked] = useState<number | null>(null);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   // Ref's
   const floatingRef = useRef<HTMLElement>(null);
 
   // Functions
-  function handleShowFloat(): void {
+  function handleShowMenu(): void {
     setIsOpen(!isOpen);
   }
 
-  function handleSelectionClick(id: number): void {
-    setLastClicked(id);
-    handleShowFloat();
+  function handleNavClick() {
+    if (isOpen) return;
+    handleShowMenu();
   }
 
   function checkIfClickedOutside({ target }: MouseEvent): void {
-    if (isOpen && floatingRef.current && !floatingRef.current.contains(target as Node)) handleShowFloat();
+    if (isOpen && floatingRef.current && !floatingRef.current.contains(target as Node)) handleShowMenu();
   }
 
   // Effects
@@ -38,27 +37,21 @@ export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): Rea
     return () => document.removeEventListener("mousedown", checkIfClickedOutside);
   }, [isOpen]);
 
+  function handleActive(id: string | undefined): string {
+    return cn(floatingMenuItem, activeSection === id ? " text-primary" : "");
+  }
+
   return (
-    <nav
-      ref={floatingRef}
-      className={
-        "hidden z-20 lg:flex shrink-0 grow-0 justify-around gap-4 border-t bg-transparent p-2.5 shadow-lg backdrop-blur-lg fixed top-2/4 -translate-y-2/4 left-4 min-h-[auto] min-w-[74px] flex-col rounded-lg border border-primary transition-all"
-      }
-    >
+    <nav ref={floatingRef} className={floatingMenuClassName} onClick={handleNavClick}>
       {isOpen ? (
-        sections.map(({ id, icon = "", name }, idx) => (
-          <a
-            key={idx}
-            href={`#${id}`}
-            onClick={() => handleSelectionClick(idx)}
-            className={lastClicked === idx ? selectedFloatingSection : nonSelectedFloatingSection}
-          >
+        sections.map(({ id, icon, name }) => (
+          <a key={id} href={`#${id}`} onClick={handleShowMenu} className={handleActive(id)}>
             <NavbarIcons size={25} name={icon} className="mt-1" />
             <small className="pt-[0.5px] text-xs font-medium text-center">{name}</small>
           </a>
         ))
       ) : (
-        <button onClick={handleShowFloat} className="flex flex-col items-center justify-center text-primary">
+        <button className="flex flex-col items-center justify-center text-primary">
           <NavbarIcons name="Menu" size={25} />
         </button>
       )}

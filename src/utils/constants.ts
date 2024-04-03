@@ -91,17 +91,13 @@ export const SpringNavbarAnimation = {
   stiffness: 130,
 };
 
-export const selectedFloatingSection =
-  "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 p-1.5 text-primary hover:text-orange-600";
+/** Floating Nav Main Item Class */
+export const floatingMenuItem =
+  "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-2 p-1.2 hover:text-orange-600";
 
-export const nonSelectedFloatingSection =
-  "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 p-1.5 hover:text-orange-600";
-
-export const floatingMenuOpenClassName =
-  "hidden z-20 md:flex shrink-0 grow-0 justify-around gap-4 bg-transparent p-1.8 shadow-lg backdrop-blur-2xl fixed top-2/4 -translate-y-2/4 left-5 min-h-[auto] min-w-[74px] flex-col rounded-lg border border-primary";
-
-export const floatingMenuCloseClassName =
-  "hidden z-20 md:flex shrink-0 grow-0 justify-around gap-4 bg-transparent p-1.5 shadow-lg backdrop-blur-2xl fixed top-2/4 -translate-y-2/4 left-5 min-h-[auto] min-w-[44px] flex-col rounded-lg border border-primary";
+/** Floating Nav main classes */
+export const floatingMenuClassName =
+  "hidden z-20 lg:flex shrink-0 grow-0 justify-around gap-4 border-t bg-transparent p-2.5 shadow-lg backdrop-blur-lg fixed top-2/4 -translate-y-2/4 left-4 min-h-[auto] min-w-[74px] flex-col rounded-lg border border-primary transition-all";
 
 export const TextVariants = {
   hidden: {

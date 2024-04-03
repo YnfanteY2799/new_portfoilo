@@ -29,7 +29,7 @@ export default function NavBar(): ReactNode {
   useEffect(() => setHoveredPath(() => actualPath), [actualPath]);
 
   return (
-    <div className="p-[0.4rem] sticky z-[100] bg-transparent backdrop-blur-md">
+    <div className="p-[0.4rem] sticky z-[100] bg-transparent backdrop-blur-md border-b border-b-foreground dark:border-none">
       <nav className="w-full z-[100] rounded-lg">
         <div className="flex justify-between">
           <Link href="/" className="text-xl normal-case flex gap-1">
@@ -70,7 +70,9 @@ export default function NavBar(): ReactNode {
               </Link>
             ))}
             <Divider orientation="vertical" />
-            <ButtonThemeSwitcher />
+            <div className="py-1">
+              <ButtonThemeSwitcher />
+            </div>
           </div>
           <MobileNavbar />
         </div>

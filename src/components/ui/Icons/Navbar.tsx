@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import type { ICommonIconProps } from "@/types";
 
 export default function NavbarIcons({ name, size, className }: ICommonIconProps): ReactNode {
-  switch (name.toLocaleLowerCase()) {
+  switch (name?.toLocaleLowerCase()) {
     case "home":
       return <House size={size} className={className} />;
     case "about":

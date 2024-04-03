@@ -3,7 +3,7 @@ import type { TFloatingNavOptions, TNavOption } from "./index.ts";
 import type { ReactNode } from "react";
 
 export interface ICommonIconProps {
-  name: string;
+  name?: string;
   size?: number;
   className?: string;
 }
