@@ -62,3 +62,7 @@ export function staggerContainer(staggerChildren?: any, delayChildren?: any): Va
     },
   };
 }
+
+export function getHash() {
+  return typeof window !== "undefined" ? decodeURIComponent(window.location.hash.replace("#", "")) : undefined;
+}

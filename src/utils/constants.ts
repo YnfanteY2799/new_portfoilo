@@ -92,12 +92,7 @@ export const SpringNavbarAnimation = {
 };
 
 /** Floating Nav Main Item Class */
-export const floatingMenuItem =
-  "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-2 p-1.2 hover:text-orange-600";
-
-/** Floating Nav main classes */
-export const floatingMenuClassName =
-  "hidden z-20 lg:flex shrink-0 grow-0 justify-around gap-4 border-t bg-transparent p-2.5 shadow-lg backdrop-blur-lg fixed top-2/4 -translate-y-2/4 left-4 min-h-[auto] min-w-[74px] flex-col rounded-lg border border-primary transition-all";
+export const floatingMenuItem = "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-2 p-1.2";
 
 export const TextVariants = {
   hidden: {

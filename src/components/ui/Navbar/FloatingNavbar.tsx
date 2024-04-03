@@ -1,17 +1,16 @@
 "use client";
-import { cn, floatingMenuClassName, floatingMenuItem } from "@/utils";
 import { type ReactNode, useEffect, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
+import { cn, floatingMenuItem, useGetUrlHash } from "@/utils";
 import { NavbarIcons } from "@/components";
 
 import type { IFloatingMenuProps } from "@/types";
 
 export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): ReactNode {
   // Hooks
-  const pathname = usePathname();
+  const pathash = useGetUrlHash();
 
   // State
-  const [activeSection, setActiveSection] = useState<string | null>(null);
+  const [activeSection, setActiveSection] = useState<string | undefined>(undefined);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   // Ref's
@@ -36,15 +35,27 @@ export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): Rea
     return () => document.removeEventListener("mousedown", checkIfClickedOutside);
   }, [isOpen]);
 
-  function handleActive(id: string | undefined): string {
-    return cn(floatingMenuItem, activeSection === id ? " text-primary" : "");
-  }
+  useEffect(() => {
+    setActiveSection(pathash);
+  }, [pathash]);
+
+
+  console.log(pathash)
 
   return (
-    <nav ref={floatingRef} className={floatingMenuClassName} onClick={handleNavClick}>
+    <nav
+      ref={floatingRef}
+      onClick={handleNavClick}
+      className="hidden z-20 lg:flex shrink-0 grow-0 justify-around gap-4 border-t bg-transparent p-2.5 shadow-lg backdrop-blur-lg fixed top-2/4 -translate-y-2/4 left-4 min-h-[auto] min-w-[54px] flex-col rounded-lg border border-primary transition-all"
+    >
       {isOpen ? (
         sections.map(({ id, icon, name }) => (
-          <a key={id} href={`#${id}`} onClick={handleShowMenu} className={handleActive(id)}>
+          <a
+            key={id}
+            href={`#${id}`}
+            onClick={handleShowMenu}
+            className={cn(floatingMenuItem, activeSection === id ? " text-primary" : " hover:text-orange-500")}
+          >
             <NavbarIcons size={25} name={icon} className="mt-1" />
             <small className="pt-[0.5px] text-xs font-medium text-center">{name}</small>
           </a>
