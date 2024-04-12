@@ -43,7 +43,7 @@ export default function NavBar(): ReactNode {
             />
             <span className="pt-[5px]">| DEV</span>
           </Link>
-          <div className="md:flex gap-2 hidden ">
+          <div className="md:flex gap-2 hidden">
             {NavOptions.map(({ path }, idx) => (
               <Link
                 key={idx}
@@ -74,7 +74,7 @@ export default function NavBar(): ReactNode {
               </Link>
             ))}
             <Divider orientation="vertical" />
-            <div className="pt-[6px]">
+            <div className="pt-[2px]">
               <ButtonThemeSwitcher />
             </div>
           </div>

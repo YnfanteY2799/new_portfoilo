@@ -1,4 +1,14 @@
-import { List, Code, House, Info, NewspaperClipping, Cake, Circuitry, AddressBook } from "@phosphor-icons/react/dist/ssr";
+import {
+  List,
+  Code,
+  Info,
+  Cake,
+  House,
+  Circuitry,
+  CaretRight,
+  AddressBook,
+  NewspaperClipping,
+} from "@phosphor-icons/react/dist/ssr";
 
 import type { ReactNode } from "react";
 import type { ICommonIconProps } from "@/types";
@@ -21,6 +31,8 @@ export default function NavbarIcons({ name = "", size, className }: ICommonIconP
       return <List size={size} className={className} />;
     case "contact_me":
       return <AddressBook size={size} className={className} />;
+    case "arrow_r":
+      return <CaretRight size={size} className={className} />;
     default:
       return <></>;
   }

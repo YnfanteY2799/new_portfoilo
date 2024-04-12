@@ -37,9 +37,13 @@ export default function MobileNavbar({ options = [] }: IMovileNavbarProps): Reac
               key={path}
               href={path}
               onClick={handleOpen}
-              className="text-foreground bg-background flex items-center gap-2 hover:bg-foreground hover:text-primary rounded-full px-6 py-4 text-xl font-medium transition-color duration-250"
+              className="text-foreground bg-background flex justify-between items-center gap-2 hover:bg-foreground hover:text-primary rounded-full px-6 py-4 text-xl font-medium transition-color duration-250"
             >
-              {path}
+              <div className="flex gap-2 text-xl">
+                <NavbarIcons name={path} className="mt-[6px]" size={20} />
+                {path}
+              </div>
+              <NavbarIcons name="arrow_r" size={20} />
             </Link>
           ))}
         </div>
