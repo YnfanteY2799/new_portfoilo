@@ -169,3 +169,5 @@ export const DACtextVariants = {
     opacity: 1,
   },
 };
+
+export const GenerableChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";

@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge";
 
 import type { CommonAnimationProps } from "@/types";
 import type { Variants } from "framer-motion";
+import { GenerableChars } from "./constants";
 
 export function cn(...inputs: ClassValue[]): string {
   return twMerge(clsx(inputs));
@@ -65,4 +66,10 @@ export function staggerContainer(staggerChildren?: any, delayChildren?: any): Va
 
 export function getHash() {
   return typeof window !== "undefined" ? decodeURIComponent(window.location.hash.replace("#", "")) : undefined;
+}
+
+export function generateRandomString(length: number): string {
+  let result = "";
+  for (let i = 0; i < length; i++) result += GenerableChars.charAt(Math.floor(Math.random() * GenerableChars.length));
+  return result;
 }
