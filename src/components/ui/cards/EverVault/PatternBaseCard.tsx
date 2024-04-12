@@ -1,9 +1,10 @@
 "use client";
 import { motion, useMotionTemplate } from "framer-motion";
 
+import type { ICardPatternProps } from "@/types";
 import type { ReactNode } from "react";
 
-export default function CardPattern({ mouseX, mouseY, randomString }: any): ReactNode {
+export default function CardPattern({ mouseX, mouseY, randomString }: ICardPatternProps): ReactNode {
   // Hooks
   const maskImage = useMotionTemplate`radial-gradient(250px at ${mouseX}px ${mouseY}px, white, transparent)`;
 

@@ -1,5 +1,6 @@
 import type { ButtonProps, TooltipPlacement } from "@nextui-org/react";
 import type { TFloatingNavOptions, TNavOption } from "./index.ts";
+import type { MotionValue } from "framer-motion";
 import type { ReactNode } from "react";
 
 export interface ICommonIconProps {
@@ -65,4 +66,10 @@ export interface IMovileNavbarProps {
 export interface IEverVaultCardProps {
   text?: string;
   className?: string;
+}
+
+export interface ICardPatternProps {
+  randomString?: string;
+  mouseX: MotionValue<number>;
+  mouseY: MotionValue<number>;
 }
