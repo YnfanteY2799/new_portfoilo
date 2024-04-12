@@ -43,6 +43,6 @@ export { default as DevIcon } from "./svg/social/DevToIcon.tsx";
 export { default as MalIcon } from "./svg/social/MalIcon.tsx";
 
 /* Cards */
-export { default as DacCard } from "./ui/cards/DirectionAware/index.tsx";
-export { default as TiltCard } from "./ui/cards/TiltCard/index.tsx";
-export { default as EVCard } from "./ui/cards/EverVault/index.tsx";
+export { default as DacCard } from "./ui/Cards/DirectionAware/index.tsx";
+export { default as TiltCard } from "./ui/Cards/TiltCard/index.tsx";
+export { default as EVCard } from "./ui/Cards/EverVault/index.tsx";
