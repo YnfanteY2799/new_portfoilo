@@ -1,19 +1,21 @@
 "use client";
-import { type ReactNode, useState, useEffect } from "react";
+import { type ReactNode, type MouseEvent, useState, useEffect } from "react";
 import { cn, generateRandomString } from "@/utils";
 import CardPattern from "./PatternBaseCard.tsx";
 import { useMotionValue } from "framer-motion";
 
-export default function EvervaultCard({ text, className }: { text?: string; className?: string }): ReactNode {
+import type { IEverVaultCardProps } from "@/types";
+
+export default function EvervaultCard({ text, className }: IEverVaultCardProps): ReactNode {
   // State
   const [randomString, setRandomString] = useState<string>("");
 
   // Constants
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
+  const mouseX = useMotionValue<number>(0);
+  const mouseY = useMotionValue<number>(0);
 
   // Functions
-  function onMouseMove({ currentTarget, clientX, clientY }: any): void {
+  function onMouseMove({ currentTarget, clientX, clientY }: MouseEvent): void {
     const { left, top } = currentTarget.getBoundingClientRect();
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
@@ -24,12 +26,7 @@ export default function EvervaultCard({ text, className }: { text?: string; clas
   useEffect(() => setRandomString(generateRandomString(1500)), []);
 
   return (
-    <div
-      className={cn(
-        "p-0.5 bg-transparent aspect-square flex items-center justify-center w-full h-full relative",
-        className
-      )}
-    >
+    <div className={cn("p-0.5 bg-transparent aspect-square flex items-center justify-center relative", className)}>
       <div
         onMouseMove={onMouseMove}
         className="group/card rounded-3xl w-full relative overflow-hidden bg-transparent flex items-center justify-center h-full"

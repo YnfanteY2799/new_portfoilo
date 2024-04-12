@@ -61,3 +61,8 @@ export interface IDACard {
 export interface IMovileNavbarProps {
   options?: Array<TNavOption>;
 }
+
+export interface IEverVaultCardProps {
+  text?: string;
+  className?: string;
+}
