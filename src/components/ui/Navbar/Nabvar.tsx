@@ -23,7 +23,7 @@ export default function NavBar(): ReactNode {
   const actualPath = pathNameHandler();
 
   // State
-  const [hoveredPath, setHoveredPath] = useState(actualPath);
+  const [hoveredPath, setHoveredPath] = useState<string>(actualPath);
 
   // Effect for delete ui clipping
   useEffect(() => setHoveredPath(() => actualPath), [actualPath]);

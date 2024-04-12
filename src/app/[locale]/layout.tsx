@@ -1,4 +1,4 @@
-import { BeamsBackground, CommonProviders, Navbar } from "@/components";
+import { CommonProviders, Navbar } from "@/components";
 import localFont from "next/font/local";
 import "@/css/globals.css";
 
