@@ -10,7 +10,7 @@ export default function MobileNavbar({ options = [] }: IMovileNavbarProps): Reac
   return (
     <section className="md:hidden flex">
       <Button variant="flat" isIconOnly size="sm" color="primary">
-        <NavbarIcons name="menu"/>
+        <NavbarIcons name="menu" />
       </Button>
 
       <nav className="bg-white h-screen flex flex-col gap-5 p-2 w-full absolute top-14 left-0">
@@ -33,13 +33,13 @@ export default function MobileNavbar({ options = [] }: IMovileNavbarProps): Reac
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
                 className="w-6 h-6"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinejoin="round"
+                  strokeLinecap="round"
                   d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
                 />
               </svg>
@@ -53,7 +53,8 @@ export default function MobileNavbar({ options = [] }: IMovileNavbarProps): Reac
         <div className="flex flex-col gap-2">
           {options.map(({ path }) => (
             <Link
-              id={path}
+            id={path}
+              key={path}
               href={path}
               className="text-foreground bg-black flex items-center gap-2 hover:bg-white hover:text-black rounded-full px-6 py-4 text-xl font-medium transition duration-250"
             >
