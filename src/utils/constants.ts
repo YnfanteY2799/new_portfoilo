@@ -170,4 +170,13 @@ export const DACtextVariants = {
   },
 };
 
+/* Generable Chars for Function */
 export const GenerableChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+/* Generable Chars for Function */
+
+/* Rotation Ranges <Base Tilt Component> */
+
+export const TILT_ROTATION_RANGE = 32.5;
+export const TILT_HALF_ROTATION_RANGE = 32.5 / 2;
+
+/* Rotation Ranges <Base Tilt Component> */
