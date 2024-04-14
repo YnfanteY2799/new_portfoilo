@@ -14,8 +14,14 @@ export default function AboutSection(): ReactNode {
       <motion.p
         className="mt-4 text-primary text-[17px] max-w-3xl leading-[30px]"
         variants={cad({ direction: "", type: "", delay: 0.1, duration: 1 }, "fadeIn")}
-      ></motion.p>
-      <div className="flex flex-wrap mt-20">
+      >
+        XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+        XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+        XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+        XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+        XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+      </motion.p>
+      <div className="flex flex-wrap mt-10 gap-4">
         {[1, 2, 3, 4].map((_) => (
           <TiltCard key={_} />
         ))}

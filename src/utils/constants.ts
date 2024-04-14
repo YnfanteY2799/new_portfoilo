@@ -1,4 +1,5 @@
 import type { TCommonLinkIcon, TNavOption, TFloatingNavOptions } from "@/types";
+import { commonAnimationDispatcher } from "./functions";
 
 export const { NEXT_PUBLIC_DRIVE_LINK: cv = "" } = process.env;
 
@@ -176,7 +177,15 @@ export const GenerableChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvw
 
 /* Rotation Ranges <Base Tilt Component> */
 
-export const TILT_ROTATION_RANGE = 32.5;
-export const TILT_HALF_ROTATION_RANGE = 32.5 / 2;
+export const TILT_ROTATION_RANGE = 34.5;  //  32 (old)
+export const TILT_HALF_ROTATION_RANGE = 34.5 / 2; //  32 (old)
 
 /* Rotation Ranges <Base Tilt Component> */
+
+/* Spawn from right Variants */
+export const spawnFromRight = commonAnimationDispatcher(
+  { direction: "right", type: "spring", delay: 0.5 * (1 ?? 1), duration: 0.75 },
+  "fadein"
+);
+
+/* Spawn from right Variants */

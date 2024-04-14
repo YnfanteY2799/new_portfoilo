@@ -30,6 +30,7 @@ export { default as DropdownSwitchers } from "./ui/Switchers/ConfigDropdownsSwit
 export { default as ButtonThemeSwitcher } from "./ui/Switchers/ThemeButtonSwitcher.tsx";
 
 /* Wrappers */
+export { default as BaseTiltWrapper } from "./ui/Wrappers/BaseTilt.tsx";
 export { default as SectionWrapper } from "./ui/Wrappers/Section.tsx";
 
 /* Socials */
@@ -44,5 +45,7 @@ export { default as MalIcon } from "./svg/social/MalIcon.tsx";
 
 /* Cards */
 export { default as DacCard } from "./ui/Cards/DirectionAware/index.tsx";
-export { default as TiltCard } from "./ui/Cards/TiltCard/index.tsx";
 export { default as EVCard } from "./ui/Cards/EverVault/index.tsx";
+
+/* Testing Components */
+export { default as TiltCard } from "./ui/Cards/TiltCard/index.tsx";

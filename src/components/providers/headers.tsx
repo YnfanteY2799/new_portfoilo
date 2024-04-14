@@ -16,7 +16,7 @@ export default function SectionHeader({ head, subHead, moreDetails }: ISectionHe
       <div className="flex flex-row">
         <h2 className="font-black md:text-[60px] sm:text-[50px] text-[30px] text-5xl z-0 flex font-local">
           {head}
-          {moreDetails !== undefined && (
+          {moreDetails && (
             <Link href={moreDetails} className="flex pl-4 pt-2">
               <CaretRight width={60} height={40} />
             </Link>

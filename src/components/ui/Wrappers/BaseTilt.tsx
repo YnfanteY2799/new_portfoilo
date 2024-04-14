@@ -45,12 +45,11 @@ export default function BaseTilt({ children, className }: ICommonRSC): ReactNode
   return (
     <motion.div
       ref={ref}
+      children={children}
       className={className}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ transformStyle: "preserve-3d", transform }}
-    >
-      {children}
-    </motion.div>
+    />
   );
 }
