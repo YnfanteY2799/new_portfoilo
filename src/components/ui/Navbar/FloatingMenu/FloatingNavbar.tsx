@@ -2,9 +2,9 @@
 import { type ReactNode, useEffect, useRef, useState } from "react";
 import { cn, floatingMenuItem, useGetUrlHash } from "@/utils";
 import { FloatingIcons } from "@/components";
+import { useTranslations } from "next-intl";
 
 import type { IFloatingMenuProps } from "@/types";
-import { useTranslations } from "next-intl";
 
 export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): ReactNode {
   // Hooks
@@ -54,7 +54,7 @@ export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): Rea
             onClick={handleShowMenu}
             className={cn(floatingMenuItem, activeSection === id ? " text-primary" : " hover:text-orange-500")}
           >
-            <FloatingIcons size={21} name={icon} className="mt-1" />
+            <FloatingIcons size={20} name={icon} className="mt-1" />
             <small className="text-xs font-medium text-center">{t(name)}</small>
           </a>
         ))

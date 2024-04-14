@@ -1,18 +1,19 @@
 "use client";
-
 import { ButtonThemeSwitcher, NavbarIcons } from "@/components";
 import { type ReactNode, useEffect, useState } from "react";
 import { NavOptions, SpringNavbarAnimation } from "@/utils";
 import { usePathname } from "next/navigation";
-import MobileNavbar from "./MobileNavbar.tsx";
+import MobileNavbar from "../Navbar/MobileNavbar.tsx";
 import { Divider } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function NavBar(): ReactNode {
   // Hooks
   const pathname = usePathname();
+  const t = useTranslations();
 
   // Functions
   function pathNameHandler(): string {
@@ -43,7 +44,7 @@ export default function NavBar(): ReactNode {
             />
             <span className="pt-[5px]">| DEV</span>
           </Link>
-          <div className="md:flex gap-2 hidden">
+          <div className="md:flex gap-2 hidden ">
             {NavOptions.map(({ path }, idx) => (
               <Link
                 key={idx}
@@ -74,7 +75,7 @@ export default function NavBar(): ReactNode {
               </Link>
             ))}
             <Divider orientation="vertical" />
-            <div className="pt-[2px]">
+            <div className="pt-[px]">
               <ButtonThemeSwitcher />
             </div>
           </div>

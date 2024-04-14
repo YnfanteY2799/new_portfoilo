@@ -73,3 +73,8 @@ export interface ICardPatternProps {
   mouseX: MotionValue<number>;
   mouseY: MotionValue<number>;
 }
+
+export interface ICommonIntlProviderProps {
+  messageId: string;
+  children?: ReactNode;
+}

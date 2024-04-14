@@ -1,16 +1,22 @@
 {
-     "Hero": {
-          "welcome": "Hola, Soy Yassett J. Ynfante",
-          "get_cv": "¡Consigue mi CV!",
-          "get_contact": "¡Ponte en contacto conmigo!",
-          "dev_title": "Desarrollador FullStack"
-     },
-     "Home_FM": {
-          "start": "Inicio",
-          "about": "Acerca de mi",
-          "tech": "Tecnoologias",
-          "projects": "Proyectos",
-          "experience": "Experiencia",
-          "contact_me": "Contactame"
-     }
+  "Hero": {
+    "welcome": "Hola, Soy Yassett J. Ynfante",
+    "get_cv": "¡Consigue mi CV!",
+    "get_contact": "¡Ponte en contacto conmigo!",
+    "dev_title": "Desarrollador FullStack"
+  },
+  "Navbar": {
+    "home": "Inicio",
+    "about": "Acerca de mi",
+    "projects": "Proyectos",
+    "blog": "Blog"
+  },
+  "Home_FM": {
+    "start": "Inicio",
+    "about": "Acerca de mi",
+    "tech": "Tecnoologias",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "contact_me": "Contactame"
+  }
 }

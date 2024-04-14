@@ -1,8 +1,8 @@
 "use client";
 
 import { commonAnimationDispatcher as cad } from "@/utils";
-import SectionHeader from "../providers/Headers.tsx";
 import { TiltCard, SectionWrapper } from "@/components";
+import SectionHeader from "../providers/Headers.tsx";
 import { motion } from "framer-motion";
 
 import type { ReactNode } from "react";
@@ -15,7 +15,7 @@ export default function AboutSection(): ReactNode {
         className="mt-4 text-primary text-[17px] max-w-3xl leading-[30px]"
         variants={cad({ direction: "", type: "", delay: 0.1, duration: 1 }, "fadeIn")}
       ></motion.p>
-      <div className="flex flex-wrap mt-16">
+      <div className="flex flex-wrap mt-20">
         {[1, 2, 3, 4].map((_) => (
           <TiltCard key={_} />
         ))}
