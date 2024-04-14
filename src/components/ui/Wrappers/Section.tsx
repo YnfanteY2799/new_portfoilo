@@ -6,6 +6,10 @@ import type { ReactNode } from "react";
 import type { ICommonSectionWrapperProps } from "@/types";
 
 export default function SectionWrapper(props: ICommonSectionWrapperProps): ReactNode {
+  
+
+
+
   return (
     <motion.section
       {...props}
