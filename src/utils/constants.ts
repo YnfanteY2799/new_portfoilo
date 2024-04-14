@@ -177,7 +177,7 @@ export const GenerableChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvw
 
 /* Rotation Ranges <Base Tilt Component> */
 
-export const TILT_ROTATION_RANGE = 34.5;  //  32 (old)
+export const TILT_ROTATION_RANGE = 34.5; //  32 (old)
 export const TILT_HALF_ROTATION_RANGE = 34.5 / 2; //  32 (old)
 
 /* Rotation Ranges <Base Tilt Component> */
@@ -187,5 +187,11 @@ export const spawnFromRight = commonAnimationDispatcher(
   { direction: "right", type: "spring", delay: 0.5 * (1 ?? 1), duration: 0.75 },
   "fadein"
 );
-
 /* Spawn from right Variants */
+
+/* Text Reveal Variants */
+export const textRevealVariant = commonAnimationDispatcher(
+  { direction: "", type: "", delay: 0.1, duration: 1 },
+  "fadeIn"
+);
+/* Text Reveal Variants */

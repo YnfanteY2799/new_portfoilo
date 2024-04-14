@@ -44,6 +44,7 @@ export { default as DevIcon } from "./svg/social/DevToIcon.tsx";
 export { default as MalIcon } from "./svg/social/MalIcon.tsx";
 
 /* Cards */
+export { default as TiltRevealCard } from "./ui/Cards/TiltReveal/index.tsx";
 export { default as DacCard } from "./ui/Cards/DirectionAware/index.tsx";
 export { default as EVCard } from "./ui/Cards/EverVault/index.tsx";
 
