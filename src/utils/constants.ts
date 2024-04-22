@@ -1,5 +1,6 @@
-import type { TCommonLinkIcon, TNavOption, TFloatingNavOptions } from "@/types";
 import { commonAnimationDispatcher } from "./functions";
+
+import type { TCommonLinkIcon, TNavOption, TFloatingNavOptions } from "@/types";
 
 export const { NEXT_PUBLIC_DRIVE_LINK: cv = "" } = process.env;
 

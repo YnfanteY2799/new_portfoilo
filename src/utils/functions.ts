@@ -1,9 +1,9 @@
 import { type ClassValue, clsx } from "clsx";
+import { GenerableChars } from "./constants";
 import { twMerge } from "tailwind-merge";
 
 import type { CommonAnimationProps } from "@/types";
 import type { Variants } from "framer-motion";
-import { GenerableChars } from "./constants";
 
 export function cn(...inputs: ClassValue[]): string {
   return twMerge(clsx(inputs));
