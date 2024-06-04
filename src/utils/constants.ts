@@ -124,7 +124,6 @@ export const DACVariants = {
   initial: {
     x: 0,
   },
-
   exit: {
     x: 0,
     y: 0,
@@ -191,8 +190,5 @@ export const spawnFromRight = commonAnimationDispatcher(
 /* Spawn from right Variants */
 
 /* Text Reveal Variants */
-export const textRevealVariant = commonAnimationDispatcher(
-  { direction: "", type: "", delay: 0.1, duration: 1 },
-  "fadeIn"
-);
+export const textRevealVariant = commonAnimationDispatcher({ direction: "", type: "", delay: 0.1, duration: 1 }, "fadeIn");
 /* Text Reveal Variants */
