@@ -82,4 +82,5 @@ export interface ICommonIntlProviderProps {
 export interface ISectionTextProps {
   className?: string;
   variants?: Variants;
+  children?: ReactNode;
 }
