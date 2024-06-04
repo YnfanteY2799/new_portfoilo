@@ -1,9 +1,6 @@
-"use client";
-
 import { commonAnimationDispatcher as cad } from "@/utils";
-import SectionHeader from "./segments/SectionHeaders.tsx";
+import { SectionHeader, SectionText } from "./segments";
 import { SectionWrapper } from "@/components";
-import { motion } from "framer-motion";
 
 import type { ReactElement } from "react";
 
@@ -11,10 +8,10 @@ export default function ContactSection(): ReactElement {
   return (
     <SectionWrapper id="Contact_Me">
       <SectionHeader head="About Me" subHead="Intro" />
-      <motion.p
+      <SectionText
         className="mt-4 text-primary text-[17px] max-w-3xl leading-[30px]"
         variants={cad({ direction: "", type: "", delay: 0.1, duration: 1 }, "fadeIn")}
-      ></motion.p>
+      ></SectionText>
     </SectionWrapper>
   );
 }
