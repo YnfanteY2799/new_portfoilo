@@ -2,12 +2,16 @@
 import { ButtonThemeSwitcher, NavbarIcons } from "@/components";
 import { Button, Divider } from "@nextui-org/react";
 import { useState, type ReactNode } from "react";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 import type { IMovileNavbarProps } from "@/types";
 
 export default function MobileNavbar({ options = [] }: IMovileNavbarProps): ReactNode {
+  // Hooks
+  const t = useTranslations();
+
   // State
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -44,7 +48,7 @@ export default function MobileNavbar({ options = [] }: IMovileNavbarProps): Reac
               >
                 <div className="flex gap-2 text-xl">
                   <NavbarIcons name={path} className="mt-[6px]" size={20} />
-                  {path}
+                  {t(path)}
                 </div>
                 <NavbarIcons name="arrow_r" size={20} />
               </Link>
