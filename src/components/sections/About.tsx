@@ -1,7 +1,7 @@
 "use client";
 
 import { TiltRevealCard, SectionWrapper } from "@/components";
-import SectionHeader from "../providers/Headers.tsx";
+import SectionHeader from "../providers/SectionHeaders.tsx";
 import { textRevealVariant } from "@/utils";
 import { motion } from "framer-motion";
 

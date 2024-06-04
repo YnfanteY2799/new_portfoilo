@@ -1,6 +1,6 @@
 import type { ButtonProps, TooltipPlacement } from "@nextui-org/react";
 import type { TFloatingNavOptions, TNavOption } from "./index.ts";
-import type { MotionValue } from "framer-motion";
+import type { MotionValue, Variants } from "framer-motion";
 import type { ReactNode } from "react";
 
 export interface ICommonIconProps {
@@ -77,4 +77,9 @@ export interface ICardPatternProps {
 export interface ICommonIntlProviderProps {
   messageId: string;
   children?: ReactNode;
+}
+
+export interface ISectionTextProps {
+  className?: string;
+  variants?: Variants;
 }

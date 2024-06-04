@@ -1,7 +1,7 @@
 "use client";
 
 import { commonAnimationDispatcher as cad } from "@/utils";
-import SectionHeader from "../providers/Headers.tsx";
+import SectionHeader from "../providers/SectionHeaders.tsx";
 import { SectionWrapper } from "@/components";
 import { motion } from "framer-motion";
 
