@@ -1,5 +1,5 @@
 import { TiltRevealCard, SectionWrapper } from "@/components";
-import { SectionHeader, SectionText } from "./segments";
+import { SectionHeader, SectionText } from "./parts";
 import { textRevealVariant } from "@/utils";
 
 import type { ReactNode } from "react";

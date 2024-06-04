@@ -1,5 +1,5 @@
 import { commonAnimationDispatcher as cad } from "@/utils";
-import { SectionHeader, SectionText } from "./segments";
+import { SectionHeader, SectionText } from "./parts";
 import { SectionWrapper } from "@/components";
 
 import type { ReactElement } from "react";
