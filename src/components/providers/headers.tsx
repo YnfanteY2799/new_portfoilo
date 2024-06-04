@@ -11,7 +11,7 @@ export default function SectionHeader({ head, subHead, moreDetails }: ISectionHe
   return (
     <motion.div variants={TextVariants}>
       <p className="sm:text-[18px] text-[14px] text-primary text-xl uppercase tracking-wider font-local">{subHead}</p>
-      <div className="flex flex-row">
+      <div className={`flex flex-row ${moreDetails ? "hover:underline" : ""}`}>
         <h2
           className={cn(
             "font-black md:text-[60px] sm:text-[50px] text-[30px] text-5xl z-0 flex font-local",

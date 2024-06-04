@@ -2,8 +2,8 @@
 import { motion } from "framer-motion";
 import { beansPaths, cn } from "@/utils";
 
-import type { ReactNode } from "react";
 import type { ICommonRSC } from "@/types";
+import type { ReactNode } from "react";
 
 export default function BackgroundBeams({ className = "", children }: ICommonRSC): ReactNode {
   return (
