@@ -1,9 +1,7 @@
 "use client";
 import { type RefObject, useEffect, useState } from "react";
 
-/**
- * PENDING: documentation
- */
+/** PENDING: documentation */
 export default function useEnterView(element?: RefObject<HTMLDivElement | null>, rootMargin?: string): Boolean {
   // State
   const [isVisible, setState] = useState<boolean>(false);

@@ -1,15 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
-import { getHash } from "../index.ts";
+import { getHash } from "../functions.ts";
 
 export default function useHash(): string | undefined {
   // State
   const [hash, setHash] = useState<string | undefined>(getHash());
 
   // Function
-  function handleHashChange() {
-    setHash(getHash());
-  }
+  const handleHashChange = () => setHash(() => getHash());
 
   // Effects
   useEffect(() => {
