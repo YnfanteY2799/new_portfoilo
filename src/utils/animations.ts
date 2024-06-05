@@ -1,6 +1,8 @@
 import { commonAnimationDispatcher } from "./functions";
 
-export const SpringNavbarAnimation = {
+import type { Transition, Variants } from "framer-motion";
+
+export const SpringNavbarAnimation: Transition = {
   damping: 9,
   bounce: 0.25,
   duration: 0.3,
@@ -8,7 +10,7 @@ export const SpringNavbarAnimation = {
   stiffness: 130,
 };
 
-export const TextVariants = {
+export const TextVariants: Variants = {
   hidden: {
     y: -50,
     opacity: 0,
@@ -24,7 +26,7 @@ export const TextVariants = {
   },
 };
 
-export const DACVariants = {
+export const DACVariants: Variants = {
   initial: {
     x: 0,
   },
@@ -46,7 +48,7 @@ export const DACVariants = {
   },
 };
 
-export const DACtextVariants = {
+export const DACtextVariants: Variants = {
   initial: {
     y: 0,
     x: 0,
@@ -75,13 +77,14 @@ export const DACtextVariants = {
   },
 };
 
-/* Spawn from right Variants */
-export const spawnFromRight = commonAnimationDispatcher(
-  { direction: "right", type: "spring", delay: 0.5 * (1 ?? 1), duration: 0.75 },
+/** Spawn from right Variant */
+export const spawnFromRight: Variants = commonAnimationDispatcher(
+  { direction: "right", type: "spring", delay: 0.5 * 1, duration: 0.75 },
   "fadein"
 );
-/* Spawn from right Variants */
 
-/* Text Reveal Variants */
-export const textRevealVariant = commonAnimationDispatcher({ direction: "", type: "", delay: 0.1, duration: 1 }, "fadeIn");
-/* Text Reveal Variants */
+/** Text Reveal Variants */
+export const textRevealVariant: Variants = commonAnimationDispatcher(
+  { direction: "", type: "", delay: 0.1, duration: 1 },
+  "fadeIn"
+);

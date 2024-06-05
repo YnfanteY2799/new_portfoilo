@@ -34,7 +34,7 @@ export const homeSections: Array<TFloatingNavOptions> = [
   { id: "Contact_Me", icon: "Contact_Me", name: "contact_me" },
 ] as const;
 
-// PEDING: This should be removed before first release
+// PENDING: This should be removed before first release
 export const socials: Array<TCommonLinkIcon> = [
   { icon: "github", link: "" },
   { icon: "linkedin", link: "" },

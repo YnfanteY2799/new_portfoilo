@@ -1,14 +1,14 @@
 "use client";
-import { RefObject, useEffect, useState } from "react";
+import { type RefObject, useEffect, useState } from "react";
 
 /**
- * peding documentation
+ * PENDING: documentation
  */
 export default function useEnterView(element?: RefObject<HTMLDivElement | null>, rootMargin?: string): Boolean {
   // State
   const [isVisible, setState] = useState<boolean>(false);
 
-  //   Effect
+  // Effect
   useEffect(() => {
     const curr = element?.current;
     if (curr) {
