@@ -1,5 +1,3 @@
-import { commonAnimationDispatcher } from "./functions";
-
 import type { TCommonLinkIcon, TNavOption, TFloatingNavOptions } from "@/types";
 
 export const { NEXT_PUBLIC_DRIVE_LINK: cv = "" } = process.env;
@@ -85,32 +83,8 @@ export const homeSections: Array<TFloatingNavOptions> = [
   { id: "Contact_Me", icon: "Contact_Me", name: "contact_me" },
 ];
 
-export const SpringNavbarAnimation = {
-  damping: 9,
-  bounce: 0.25,
-  duration: 0.3,
-  type: "spring",
-  stiffness: 130,
-};
-
 /** Floating Nav Main Item Class */
 export const floatingMenuItem = "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-2 p-1.2";
-
-export const TextVariants = {
-  hidden: {
-    y: -50,
-    opacity: 0,
-  },
-  show: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      duration: 1.25,
-      delay: 0,
-    },
-  },
-};
 
 export const socials: Array<TCommonLinkIcon> = [
   { icon: "github", link: "" },
@@ -119,57 +93,6 @@ export const socials: Array<TCommonLinkIcon> = [
   { icon: "MyAnimeList", link: "" },
   { icon: "twitter", link: "" },
 ];
-
-export const DACVariants = {
-  initial: {
-    x: 0,
-  },
-  exit: {
-    x: 0,
-    y: 0,
-  },
-  top: {
-    y: 20,
-  },
-  bottom: {
-    y: -20,
-  },
-  left: {
-    x: 20,
-  },
-  right: {
-    x: -20,
-  },
-};
-
-export const DACtextVariants = {
-  initial: {
-    y: 0,
-    x: 0,
-    opacity: 0,
-  },
-  exit: {
-    y: 0,
-    x: 0,
-    opacity: 0,
-  },
-  top: {
-    y: -20,
-    opacity: 1,
-  },
-  bottom: {
-    y: 2,
-    opacity: 1,
-  },
-  left: {
-    x: -2,
-    opacity: 1,
-  },
-  right: {
-    x: 20,
-    opacity: 1,
-  },
-};
 
 /* Generable Chars for Function */
 export const GenerableChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -181,17 +104,6 @@ export const TILT_ROTATION_RANGE = 34.5; //  32 (old)
 export const TILT_HALF_ROTATION_RANGE = 34.5 / 2; //  32 (old)
 
 /* Rotation Ranges <Base Tilt Component> */
-
-/* Spawn from right Variants */
-export const spawnFromRight = commonAnimationDispatcher(
-  { direction: "right", type: "spring", delay: 0.5 * (1 ?? 1), duration: 0.75 },
-  "fadein"
-);
-/* Spawn from right Variants */
-
-/* Text Reveal Variants */
-export const textRevealVariant = commonAnimationDispatcher({ direction: "", type: "", delay: 0.1, duration: 1 }, "fadeIn");
-/* Text Reveal Variants */
 
 /* */
 export const commonSectionTextCN = "mt-4 text-primary text-[17px] max-w-3xl leading-[30px]";
