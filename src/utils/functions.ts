@@ -68,6 +68,7 @@ export function getHash(): string | undefined {
   return typeof window !== "undefined" ? decodeURIComponent(window.location.hash.replace("#", "")) : undefined;
 }
 
+/* PENDING: Improve this function */
 export function generateRandomString(length: number): string {
   let result = "";
   for (let i = 0; i < length; i++) result += GenerableChars.charAt(Math.floor(Math.random() * GenerableChars.length));

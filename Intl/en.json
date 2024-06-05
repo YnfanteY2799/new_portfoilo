@@ -9,7 +9,11 @@
     "home": "Home",
     "about": "About Me",
     "projects": "Projects",
-    "blog": "Blog"
+    "blog": "Blog",
+    "Dropdown": {
+      "lang": "English",
+      "change": "Change Language"
+    }
   },
   "Home_FM": {
     "start": "Hero",

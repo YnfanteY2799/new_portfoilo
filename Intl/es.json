@@ -9,7 +9,11 @@
     "home": "Inicio",
     "about": "Acerca de mi",
     "projects": "Proyectos",
-    "blog": "Blog"
+    "blog": "Blog",
+    "Dropdown": {
+      "lang": "Español",
+      "change": "Cambiar Idioma"
+    }
   },
   "Home_FM": {
     "start": "Inicio",

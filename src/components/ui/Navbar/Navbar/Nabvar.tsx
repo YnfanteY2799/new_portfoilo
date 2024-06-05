@@ -1,5 +1,5 @@
 "use client";
-import { ButtonThemeSwitcher, NavbarIcons } from "@/components";
+import { NavbarIcons, DropdownSwitchers } from "@/components";
 import { type ReactNode, useEffect, useState } from "react";
 import { NavOptions, SpringNavbarAnimation } from "@/utils";
 import { usePathname } from "next/navigation";
@@ -76,7 +76,7 @@ export default function NavBar(): ReactNode {
             ))}
             <Divider orientation="vertical" />
             <div className="pt-[px]">
-              <ButtonThemeSwitcher />
+              <DropdownSwitchers />
             </div>
           </div>
           <MobileNavbar options={NavOptions} />
