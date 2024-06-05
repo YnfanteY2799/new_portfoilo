@@ -2,7 +2,60 @@ import type { TCommonLinkIcon, TNavOption, TFloatingNavOptions } from "@/types";
 
 export const { NEXT_PUBLIC_DRIVE_LINK: cv = "" } = process.env;
 
-export const beansPaths = [
+// Component Unique constants ↓↓↓↓↓
+
+/** Static Navbar options these are static due to SUPER low change of modifycation */
+export const NavOptions: Array<TNavOption> = [
+  {
+    id: 0,
+    path: "home",
+  },
+  {
+    id: 1,
+    path: "about",
+  },
+  {
+    id: 2,
+    path: "projects",
+  },
+  {
+    id: 3,
+    path: "blog",
+  },
+] as const;
+
+/** Static Floating Navbar options these are static due to SUPER low change of modifycation */
+export const homeSections: Array<TFloatingNavOptions> = [
+  { id: "Hero", icon: "Home", name: "start" },
+  { id: "About", icon: "About", name: "about" },
+  { id: "Tech", icon: "Tech", name: "tech" },
+  { id: "Projects", icon: "Projects", name: "projects" },
+  { id: "Experience", icon: "Experience", name: "experience" },
+  { id: "Contact_Me", icon: "Contact_Me", name: "contact_me" },
+] as const;
+
+// PEDING: This should be removed before first release
+export const socials: Array<TCommonLinkIcon> = [
+  { icon: "github", link: "" },
+  { icon: "linkedin", link: "" },
+  { icon: "instagram", link: "" },
+  { icon: "MyAnimeList", link: "" },
+  { icon: "twitter", link: "" },
+] as const;
+
+// Component Unique constants ↑↑↑↑↑
+
+// Component Unique  constants ↓↓↓↓↓
+
+/* Generable Chars for Function */
+export const GenerableChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789" as const;
+
+/* Rotation Ranges <Base Tilt Component> */
+export const TILT_ROTATION_RANGE = 34.5 as const; //  32 (old)
+export const TILT_HALF_ROTATION_RANGE = 34.5 / 2; //  32 (old)
+
+/** SVG Paths for Beans background on generation */
+export const beansPaths: Array<string> = [
   "M-380 -189C-380 -189 -312 216 152 343C616 470 684 875 684 875",
   "M-373 -197C-373 -197 -305 208 159 335C623 462 691 867 691 867",
   "M-366 -205C-366 -205 -298 200 166 327C630 454 698 859 698 859",
@@ -53,58 +106,17 @@ export const beansPaths = [
   "M-51 -565C-51 -565 17 -160 481 -33C945 94 1013 499 1013 499",
   "M-44 -573C-44 -573 24 -168 488 -41C952 86 1020 491 1020 491",
   "M-37 -581C-37 -581 31 -176 495 -49C959 78 1027 483 1027 483",
-];
+] as const;
 
-export const NavOptions: Array<TNavOption> = [
-  {
-    id: 0,
-    path: "home",
-  },
-  {
-    id: 1,
-    path: "about",
-  },
-  {
-    id: 2,
-    path: "projects",
-  },
-  {
-    id: 3,
-    path: "blog",
-  },
-];
+// Component Unique  constants ↑↑↑↑↑
 
-export const homeSections: Array<TFloatingNavOptions> = [
-  { id: "Hero", icon: "Home", name: "start" },
-  { id: "About", icon: "About", name: "about" },
-  { id: "Tech", icon: "Tech", name: "tech" },
-  { id: "Projects", icon: "Projects", name: "projects" },
-  { id: "Experience", icon: "Experience", name: "experience" },
-  { id: "Contact_Me", icon: "Contact_Me", name: "contact_me" },
-];
+// Css cn's ↓↓↓↓↓
+
+/* Common section text classname this is just a simple convention */
+export const commonSectionTextCN = "mt-4 text-primary text-[17px] max-w-3xl leading-[30px]" as const;
 
 /** Floating Nav Main Item Class */
-export const floatingMenuItem = "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-2 p-1.2";
+export const floatingMenuItem =
+  "flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-2 p-1.2" as const;
 
-export const socials: Array<TCommonLinkIcon> = [
-  { icon: "github", link: "" },
-  { icon: "linkedin", link: "" },
-  { icon: "instagram", link: "" },
-  { icon: "MyAnimeList", link: "" },
-  { icon: "twitter", link: "" },
-];
-
-/* Generable Chars for Function */
-export const GenerableChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-/* Generable Chars for Function */
-
-/* Rotation Ranges <Base Tilt Component> */
-
-export const TILT_ROTATION_RANGE = 34.5; //  32 (old)
-export const TILT_HALF_ROTATION_RANGE = 34.5 / 2; //  32 (old)
-
-/* Rotation Ranges <Base Tilt Component> */
-
-/* */
-export const commonSectionTextCN = "mt-4 text-primary text-[17px] max-w-3xl leading-[30px]";
-/* */
+// Css cn's ↑↑↑↑↑
