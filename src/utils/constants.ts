@@ -192,3 +192,7 @@ export const spawnFromRight = commonAnimationDispatcher(
 /* Text Reveal Variants */
 export const textRevealVariant = commonAnimationDispatcher({ direction: "", type: "", delay: 0.1, duration: 1 }, "fadeIn");
 /* Text Reveal Variants */
+
+/* */
+export const commonSectionTextCN = "mt-4 text-primary text-[17px] max-w-3xl leading-[30px]";
+/* */
