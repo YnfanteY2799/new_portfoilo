@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import type { ReactElement } from "react";
 
 export default function TechStacksSection(): ReactElement {
+  // Hooks
   const t = useTranslations("Tech");
 
   return (

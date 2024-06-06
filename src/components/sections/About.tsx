@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import type { ReactNode } from "react";
 
 export default function AboutSection(): ReactNode {
+  // Hooks
   const t = useTranslations("About");
 
   return (
