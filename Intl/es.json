@@ -26,5 +26,9 @@
   "About": {
     "subTitle": "Un breve resumen",
     "mainTitle": "Sobre mi"
+  },
+  "Tech": {
+    "subTitle": "Estas son las tecnologías que suelo usar",
+    "mainTitle": "Tecnologias"
   }
 }

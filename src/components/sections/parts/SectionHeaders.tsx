@@ -14,7 +14,7 @@ export default function SectionHeader({ head, subHead, moreDetails }: ISectionHe
       <div className={`flex flex-row ${moreDetails ? "hover:underline" : ""}`}>
         <h2
           className={cn(
-            "font-black md:text-[60px] sm:text-[50px] text-[30px] text-5xl z-0 flex font-local",
+            "font-black md:text-[55px] sm:text-[50px] text-[30px] text-5xl z-0 flex font-local",
             moreDetails ? "hover:underline" : ""
           )}
         >
