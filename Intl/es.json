@@ -28,19 +28,19 @@
     "mainTitle": "Sobre mi"
   },
   "Tech": {
-    "subTitle": "Estas son las tecnologías favoritas",
+    "subTitle": "Mis tecnologías favoritas",
     "mainTitle": "Tecnologias"
   },
   "Projects": {
-    "subTitle": "Algo en lo que he trabajado",
+    "subTitle": "Mis ultimos proyectos",
     "mainTitle": "Proyectos"
   },
   "Experience": {
-    "subTitle": "These are the technologies i usually use",
+    "subTitle": "Empresas en las que he trabajado",
     "mainTitle": "Mi Experiencia"
   },
   "Contact": {
-    "subTitle": "These are the technologies i usually use",
+    "subTitle": "Hablemos!",
     "mainTitle": "Contactame!"
   }
 }
