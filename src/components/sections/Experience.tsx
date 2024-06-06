@@ -10,7 +10,7 @@ export default function ExperienceSection(): ReactElement {
 
   return (
     <SectionWrapper id="Experience">
-      <SectionHeader head="About Me" subHead="Intro" />
+      <SectionHeader head={t("mainTitle")} subHead={t("subTitle")} />
       <SectionText>Experience</SectionText>
     </SectionWrapper>
   );

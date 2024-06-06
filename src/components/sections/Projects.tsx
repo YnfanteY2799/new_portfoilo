@@ -10,7 +10,7 @@ export default function ProjectsSection(): ReactElement {
 
   return (
     <SectionWrapper id="Projects">
-      <SectionHeader head="About Me" subHead="Intro" />
+      <SectionHeader head={t("mainTitle")} subHead={t("subTitle")} />
       <SectionText>Projects</SectionText>
     </SectionWrapper>
   );

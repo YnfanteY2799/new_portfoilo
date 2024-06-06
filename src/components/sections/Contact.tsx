@@ -10,7 +10,7 @@ export default function ContactSection(): ReactElement {
 
   return (
     <SectionWrapper id="Contact_Me">
-      <SectionHeader head="About Me" subHead="Intro" />
+      <SectionHeader head={t("mainTitle")} subHead={t("subTitle")} />
       <SectionText>Contact</SectionText>
     </SectionWrapper>
   );

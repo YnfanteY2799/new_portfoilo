@@ -30,5 +30,17 @@
   "Tech": {
     "subTitle": "These are the technologies i usually use",
     "mainTitle": "Technologies"
+  },
+  "Projects": {
+    "subTitle": "These are the technologies i usually use",
+    "mainTitle": "Projects"
+  },
+  "Experience": {
+    "subTitle": "These are the technologies i usually use",
+    "mainTitle": "Experience"
+  },
+  "Contact": {
+    "subTitle": "These are the technologies i usually use",
+    "mainTitle": "Contact me"
   }
 }
