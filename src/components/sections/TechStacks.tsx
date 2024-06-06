@@ -1,6 +1,5 @@
 import { SectionHeader, SectionText } from "./parts";
 import { SectionWrapper } from "@/components";
-import { textRevealVariant } from "@/utils";
 import { useTranslations } from "next-intl";
 
 import type { ReactElement } from "react";

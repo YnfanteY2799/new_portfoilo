@@ -8,9 +8,7 @@ export default function ExperienceSection(): ReactElement {
   return (
     <SectionWrapper id="Experience">
       <SectionHeader head="About Me" subHead="Intro" />
-      <SectionText className="mt-4 text-primary text-[17px] max-w-3xl leading-[30px]" variants={textRevealVariant}>
-        Experience
-      </SectionText>
+      <SectionText>Experience</SectionText>
     </SectionWrapper>
   );
 }
