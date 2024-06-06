@@ -22,5 +22,9 @@
     "projects": "Proyectos",
     "experience": "Experiencia",
     "contact_me": "Contactame"
+  },
+  "About": {
+    "subTitle": "Un breve resumen",
+    "mainTitle": "Sobre mi"
   }
 }

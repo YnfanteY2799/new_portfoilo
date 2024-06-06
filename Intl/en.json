@@ -22,5 +22,9 @@
     "projects": "Projects",
     "experience": "Prof. Experience",
     "contact_me": "Contact Me"
+  },
+  "About": {
+    "subTitle": "A brief summary",
+    "mainTitle": "About Me"
   }
 }
