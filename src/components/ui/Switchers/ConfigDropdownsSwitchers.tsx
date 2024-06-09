@@ -8,6 +8,7 @@ import { useTheme } from "next-themes";
 
 import type { ICDSProps } from "@/types";
 import type { ReactNode } from "react";
+import { SpainFlagIcon } from "@/components";
 
 export default function ConfigDropdownsSwitchers({ className }: ICDSProps): ReactNode {
   // Hooks
@@ -17,13 +18,16 @@ export default function ConfigDropdownsSwitchers({ className }: ICDSProps): Reac
   const pathname = usePathname();
   const params = useParams();
 
+  // Consts
+  const currLocale = params.locale;
+
   // Functions
   function onThemeChange(): void {
     setTheme(theme === "light" ? "dark" : "light");
   }
 
   function onLangChange(): void {
-    const locale = params.locale === "en" ? "es" : "en";
+    const locale = currLocale === "en" ? "es" : "en";
     // @ts-expect-error
     replace({ pathname, params }, { locale });
   }
@@ -37,7 +41,7 @@ export default function ConfigDropdownsSwitchers({ className }: ICDSProps): Reac
           </Button>
         </DropdownTrigger>
         <DropdownMenu variant="flat" aria-label="Web App Config Dropdown">
-          <DropdownItem key="Lang" onPress={onLangChange}>
+          <DropdownItem key="Lang" onPress={onLangChange} shortcut={currLocale === "es" ? <SpainFlagIcon /> : <></>}>
             {t("change")}
           </DropdownItem>
           <DropdownItem key="Theme" shortcut="⌘ + SHIFT + L" onPress={onThemeChange}>

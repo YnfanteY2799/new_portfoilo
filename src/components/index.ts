@@ -33,7 +33,7 @@ export { default as ButtonThemeSwitcher } from "./ui/Switchers/ThemeButtonSwitch
 export { default as BaseTiltWrapper } from "./ui/Wrappers/BaseTilt.tsx";
 export { default as SectionWrapper } from "./ui/Wrappers/Section.tsx";
 
-/* Socials */
+/* Socials Icons */
 export { default as FreelanceIcon } from "./svg/social/FreelanceIcon.tsx";
 export { default as LeetCodeIcon } from "./svg/social/LeetCodeIcon.tsx";
 export { default as CodewarsIcon } from "./svg/social/CodewarsIcon.tsx";
@@ -42,6 +42,9 @@ export { default as GithubIcon } from "./svg/social/GithubIcon.tsx";
 export { default as UpWorkIcon } from "./svg/social/UpWorkIcon.tsx";
 export { default as DevIcon } from "./svg/social/DevToIcon.tsx";
 export { default as MalIcon } from "./svg/social/MalIcon.tsx";
+
+/* Misc Icons */
+export { default as SpainFlagIcon } from "./svg/misc/SpainFlag.tsx";
 
 /* Cards */
 export { default as TiltRevealCard } from "./ui/Cards/TiltReveal/index.tsx";
