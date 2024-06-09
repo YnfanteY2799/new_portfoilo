@@ -7,7 +7,7 @@ import type { ReactNode } from "react";
 
 export default function SectionText(props: ISectionTextProps): ReactNode {
   // Syntactic Sugar
-  const { className = commonSectionTextCN, variants = textRevealVariant , children } = props;
+  const { className = commonSectionTextCN, variants = textRevealVariant, children } = props;
 
   return (
     <motion.p className={className} variants={variants}>

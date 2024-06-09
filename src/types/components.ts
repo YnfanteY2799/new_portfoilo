@@ -42,6 +42,7 @@ export interface ICommonSectionWrapperProps {
 export interface ISectionHeadProps {
   head?: string;
   subHead?: string;
+  isLoading?: boolean;
   moreDetails?: string;
 }
 
