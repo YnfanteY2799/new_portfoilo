@@ -25,8 +25,8 @@
     "contact_me": "Contactame"
   },
   "About": {
-    "subTitle": "Un breve resumen",
     "mainTitle": "Sobre mi",
+    "subTitle": "Un breve resumen",
     "defaultAboutText": "Soy un desarrollador de software Fullstack con experiencia y preferencia en Javascript y Typescript, ademas de experto en frameworks como NextJs, Express, NodeJs, entre otros. Aprendo rápidamente y estoy acostumbrado a colaborar estrechamente con los clientes para crear la solución que necesitan. Si estás interesado en trabajar conmigo, puedes contactarme."
   },
   "Tech": {

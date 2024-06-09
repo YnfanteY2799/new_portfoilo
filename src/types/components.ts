@@ -100,3 +100,8 @@ export interface IAboutSectProps {
   isLoading?: boolean;
   categories?: Array<any>;
 }
+
+export interface IMeteorsBGProps {
+  number?: number;
+  className?: string;
+}

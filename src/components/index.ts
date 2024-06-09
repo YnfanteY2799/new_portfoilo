@@ -3,6 +3,7 @@ export { default as CommonProviders } from "./providers/CommonProviders.tsx";
 
 /* Background */
 export { default as BeamsBackground } from "./ui/Backgrounds/Beams.tsx";
+export { default as MeteorsBackground } from "./ui/Backgrounds/Meteors.tsx";
 
 /* Navbar */
 export { default as FloatingNavbar } from "./ui/Navbar/FloatingMenu/index.tsx";
