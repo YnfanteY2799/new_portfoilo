@@ -4,12 +4,12 @@ import { type ReactNode, useEffect } from "react";
 
 import type { ISecuentialTextProps } from "@/types";
 
-export default function TextGenerateEffect({ words, className, duration }: ISecuentialTextProps): ReactNode {
+export default function TextGenerateEffect({ words, duration }: ISecuentialTextProps): ReactNode {
   // Hooks
   const [scope, animate] = useAnimate();
 
   // Consts
-  const wordsArray = (words ?? "").split(" ");
+  const wordsArray = (words ?? "").split("");
 
   // Animate Destructuring
   const { current } = scope;
@@ -20,20 +20,12 @@ export default function TextGenerateEffect({ words, className, duration }: ISecu
   }, [current]);
 
   return (
-    <div className={className}>
-      <div className="mt-4">
-        <div className="dark:text-white text-black text-2xl leading-snug tracking-wide">
-          <motion.div ref={scope}>
-            {wordsArray.map((word, idx) => {
-              return (
-                <motion.span key={word + idx} className="dark:text-white text-black opacity-0">
-                  {word}
-                </motion.span>
-              );
-            })}
-          </motion.div>
-        </div>
-      </div>
-    </div>
+    <motion.div ref={scope}>
+      {wordsArray.map((word, idx) => (
+        <motion.span key={word + idx} className="opacity-0">
+          {word}
+        </motion.span>
+      ))}
+    </motion.div>
   );
 }

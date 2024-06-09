@@ -93,5 +93,4 @@ export interface ICDSProps {
 export interface ISecuentialTextProps {
   words?: string;
   duration?: number;
-  className?: string;
 }

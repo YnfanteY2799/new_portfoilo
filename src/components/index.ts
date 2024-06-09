@@ -50,3 +50,6 @@ export { default as EVCard } from "./ui/Cards/EverVault/index.tsx";
 
 /* Testing Components */
 export { default as TiltCard } from "./ui/Cards/TiltCard/index.tsx";
+
+// Bulks
+export * from "./ui/Animations";

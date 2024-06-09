@@ -12,7 +12,8 @@
     "blog": "Blog",
     "Dropdown": {
       "lang": "English",
-      "change": "Change Language"
+      "change": "Change Language",
+      "changeTheme": "Change Theme"
     }
   },
   "Home_FM": {
