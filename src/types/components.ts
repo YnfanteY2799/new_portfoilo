@@ -94,3 +94,9 @@ export interface ISecuentialTextProps {
   words?: string;
   duration?: number;
 }
+
+export interface IAboutSectProps {
+  mainText?: string;
+  isLoading?: boolean;
+  categories?: Array<any>;
+}

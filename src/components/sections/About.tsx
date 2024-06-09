@@ -2,19 +2,20 @@ import { TiltRevealCard, SectionWrapper } from "@/components";
 import { SectionHeader, SectionText } from "./parts";
 import { useTranslations } from "next-intl";
 
+import type { IAboutSectProps } from "@/types";
 import type { ReactNode } from "react";
 
-export default function AboutSection(): ReactNode {
+export default function AboutSection({ mainText, categories, isLoading }: IAboutSectProps): ReactNode {
   // Hooks
   const t = useTranslations("About");
 
   return (
     <SectionWrapper id="About">
       <SectionHeader head={t("mainTitle")} subHead={t("subTitle")} moreDetails="About" />
-      <SectionText>About</SectionText>
+      <SectionText>{t("defaultAboutText")}</SectionText>
       <div className="flex flex-wrap mt-10 gap-4">
-        {[1, 2, 3, 4].map((_) => (
-          <TiltRevealCard key={_} />
+        {(categories ?? [1, 2, 3, 4]).map((data, idx) => (
+          <TiltRevealCard key={idx} />
         ))}
       </div>
     </SectionWrapper>

@@ -36,7 +36,7 @@ export default function ConfigDropdownsSwitchers({ className }: ICDSProps): Reac
     <div className={className}>
       <Dropdown as="button" closeOnSelect={false}>
         <DropdownTrigger>
-          <Button variant="flat" isIconOnly size="sm" color="primary">
+          <Button variant="bordered" isIconOnly size="sm" color="primary">
             <CaretDown size={18} fill="gray" />
           </Button>
         </DropdownTrigger>
