@@ -45,6 +45,7 @@ export { default as MalIcon } from "./svg/social/MalIcon.tsx";
 
 /* Misc Icons */
 export { default as SpainFlagIcon } from "./svg/misc/SpainFlag.tsx";
+export { default as NortAmericanFlag } from "./svg/misc/NortAmericanFlag.tsx";
 
 /* Cards */
 export { default as TiltRevealCard } from "./ui/Cards/TiltReveal/index.tsx";

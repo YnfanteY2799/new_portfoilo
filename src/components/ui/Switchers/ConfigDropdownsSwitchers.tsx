@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 
 import type { ICDSProps } from "@/types";
 import type { ReactNode } from "react";
-import { SpainFlagIcon } from "@/components";
+import { NortAmericanFlag, SpainFlagIcon } from "@/components";
 
 export default function ConfigDropdownsSwitchers({ className }: ICDSProps): ReactNode {
   // Hooks
@@ -41,7 +41,11 @@ export default function ConfigDropdownsSwitchers({ className }: ICDSProps): Reac
           </Button>
         </DropdownTrigger>
         <DropdownMenu variant="flat" aria-label="Web App Config Dropdown">
-          <DropdownItem key="Lang" onPress={onLangChange} shortcut={currLocale === "es" ? <SpainFlagIcon /> : <></>}>
+          <DropdownItem
+            key="Lang"
+            onPress={onLangChange}
+            shortcut={currLocale === "es" ? <SpainFlagIcon /> : <NortAmericanFlag />}
+          >
             {t("change")}
           </DropdownItem>
           <DropdownItem key="Theme" shortcut="⌘ + SHIFT + L" onPress={onThemeChange}>
