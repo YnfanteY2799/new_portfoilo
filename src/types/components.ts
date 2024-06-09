@@ -84,3 +84,14 @@ export interface ISectionTextProps {
   variants?: Variants;
   children?: ReactNode;
 }
+
+/** * ICDS => Interface Configurations Dropdown Switches */
+export interface ICDSProps {
+  className?: string;
+}
+
+export interface ISecuentialTextProps {
+  words?: string;
+  duration?: number;
+  className?: string;
+}

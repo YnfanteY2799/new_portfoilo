@@ -75,9 +75,7 @@ export default function NavBar(): ReactNode {
               </Link>
             ))}
             <Divider orientation="vertical" />
-            <div className="pt-[px]">
-              <DropdownSwitchers />
-            </div>
+            <DropdownSwitchers className="pt-[2px]" />
           </div>
           <MobileNavbar options={NavOptions} />
         </div>
