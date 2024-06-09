@@ -45,10 +45,10 @@ export default function NavBar(): ReactNode {
             <span className="pt-[5px]">| DEV</span>
           </Link>
           <div className="md:flex gap-2 hidden">
-            {NavOptions.map(({ path }, idx) => (
+            {NavOptions.map(({ path, routerPath }, idx) => (
               <Link
                 key={idx}
-                href={path}
+                href={routerPath}
                 data-active={path === actualPath}
                 onMouseOver={() => setHoveredPath(path)}
                 onMouseLeave={() => setHoveredPath(actualPath)}

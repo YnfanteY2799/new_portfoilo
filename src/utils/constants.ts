@@ -9,18 +9,22 @@ export const NavOptions: Array<TNavOption> = [
   {
     id: 0,
     path: "home",
+    routerPath: "Home",
   },
   {
     id: 1,
     path: "about",
+    routerPath: "About",
   },
   {
     id: 2,
     path: "projects",
+    routerPath: "Projects",
   },
   {
     id: 3,
     path: "blog",
+    routerPath: "Blog",
   },
 ] as const;
 

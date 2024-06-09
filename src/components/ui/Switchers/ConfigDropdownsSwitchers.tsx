@@ -1,6 +1,7 @@
 "use client";
 import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@nextui-org/react";
-import { CaretDown } from "@phosphor-icons/react/dist/ssr";
+import { NortAmericanFlag, SpainFlagIcon } from "@/components";
+import { CaretDown, MoonStars, SunHorizon } from "@phosphor-icons/react/dist/ssr";
 import { useRouter, usePathname } from "@/utils";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
@@ -8,7 +9,6 @@ import { useTheme } from "next-themes";
 
 import type { ICDSProps } from "@/types";
 import type { ReactNode } from "react";
-import { NortAmericanFlag, SpainFlagIcon } from "@/components";
 
 export default function ConfigDropdownsSwitchers({ className }: ICDSProps): ReactNode {
   // Hooks
@@ -34,7 +34,7 @@ export default function ConfigDropdownsSwitchers({ className }: ICDSProps): Reac
 
   return (
     <div className={className}>
-      <Dropdown as="button">
+      <Dropdown as="button" closeOnSelect={false}>
         <DropdownTrigger>
           <Button variant="flat" isIconOnly size="sm" color="primary">
             <CaretDown size={18} fill="gray" />
@@ -44,11 +44,17 @@ export default function ConfigDropdownsSwitchers({ className }: ICDSProps): Reac
           <DropdownItem
             key="Lang"
             onPress={onLangChange}
+            className="transition-all"
             shortcut={currLocale === "es" ? <SpainFlagIcon /> : <NortAmericanFlag />}
           >
             {t("change")}
           </DropdownItem>
-          <DropdownItem key="Theme" shortcut="⌘ + SHIFT + L" onPress={onThemeChange}>
+          <DropdownItem
+            key="Theme"
+            onPress={onThemeChange}
+            className="transition-all"
+            shortcut={theme === "dark" ? <MoonStars size={22} fill="cyan" /> : <SunHorizon size={22} fill="#8B8000" />}
+          >
             {t("changeTheme")}
           </DropdownItem>
         </DropdownMenu>
