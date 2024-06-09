@@ -1,7 +1,9 @@
 "use client";
 import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@nextui-org/react";
 import { CaretDown } from "@phosphor-icons/react/dist/ssr";
+import { useRouter, usePathname } from "@/utils";
 import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 import { useTheme } from "next-themes";
 
 import type { ICDSProps } from "@/types";
@@ -11,10 +13,19 @@ export default function ConfigDropdownsSwitchers({ className }: ICDSProps): Reac
   // Hooks
   const t = useTranslations("Dropdown");
   const { theme, setTheme } = useTheme();
+  const { replace } = useRouter();
+  const pathname = usePathname();
+  const params = useParams();
 
   // Functions
-  function onThemeChange() {
+  function onThemeChange(): void {
     setTheme(theme === "light" ? "dark" : "light");
+  }
+
+  function onLangChange(): void {
+    const locale = params.locale === "en" ? "es" : "en";
+    // @ts-expect-error
+    replace({ pathname, params }, { locale });
   }
 
   return (
@@ -26,7 +37,9 @@ export default function ConfigDropdownsSwitchers({ className }: ICDSProps): Reac
           </Button>
         </DropdownTrigger>
         <DropdownMenu variant="flat" aria-label="Web App Config Dropdown">
-          <DropdownItem key="Lang">{t("change")}</DropdownItem>
+          <DropdownItem key="Lang" onPress={onLangChange}>
+            {t("change")}
+          </DropdownItem>
           <DropdownItem key="Theme" shortcut="⌘ + SHIFT + L" onPress={onThemeChange}>
             {t("changeTheme")}
           </DropdownItem>
