@@ -7,7 +7,7 @@ import { type ReactNode } from "react";
 export default function TiltRevealCard(): ReactNode {
   return (
     <BaseTiltWrapper>
-      <motion.div variants={spawnFromRight} className={cn("w-20 bg-red-600 h-20")}>
+      <motion.div variants={spawnFromRight} className={cn("bg-primary h-full w-full")}>
         TiltRevealCard
       </motion.div>
     </BaseTiltWrapper>
