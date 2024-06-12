@@ -106,3 +106,10 @@ export interface IMeteorsBGProps {
   number?: number;
   className?: string;
 }
+
+export interface IServiceCardProps {
+  idx: number;
+  icon: string;
+  title: string;
+  click: Function;
+}
