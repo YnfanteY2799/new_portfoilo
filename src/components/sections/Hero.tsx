@@ -49,9 +49,9 @@ export default function HeroSection(): ReactNode {
           <Image
             width={1200}
             height={200}
-            src="/dudul.svg"
             loading="eager"
             alt="Profile Pic"
+            src="/doodle/dudul.svg"
             className="border rounded-lg"
             style={{ height: "auto", width: "auto" }}
           />

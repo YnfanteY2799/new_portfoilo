@@ -39,8 +39,8 @@ export default function NavBar(): ReactNode {
               width={10}
               height={10}
               alt="Page Logo"
-              src="/logo-no-background.svg"
               className="object-fill w-10 h-10"
+              src="/logos/logo-no-background.svg"
             />
             <span className="pt-[5px]">| DEV</span>
           </Link>

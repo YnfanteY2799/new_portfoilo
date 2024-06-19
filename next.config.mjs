@@ -6,7 +6,10 @@ const withNextIntl = withNextInt();
 
 const nextConfig = withNextIntl({
   images: {
-    remotePatterns: [{ protocol: "https", hostname: "cdn.myanimelist.net" }],
+    remotePatterns: [
+      { protocol: "https", hostname: "cdn.myanimelist.net" },
+      { protocol: "https", hostname: "images.unsplash.com" },
+    ],
   },
   redirects: async () => [
     {

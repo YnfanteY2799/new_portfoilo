@@ -7,6 +7,9 @@ import { useEffect, useRef, type ReactNode } from "react";
 import type { ICommonSectionWrapperProps } from "@/types";
 
 export default function SectionWrapper(props: ICommonSectionWrapperProps): ReactNode {
+  // Direct manip of props
+  const { id } = props;
+
   // Ref's
   const baseRef = useRef<HTMLDivElement>(null);
 
@@ -15,7 +18,7 @@ export default function SectionWrapper(props: ICommonSectionWrapperProps): React
 
   // Effects
   useEffect(() => {
-    console.log("is In View ", window.location, props.id);
+    console.log("is In View", id);
   }, [isInView]);
 
   return (

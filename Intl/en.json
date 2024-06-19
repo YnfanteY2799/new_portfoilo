@@ -30,19 +30,19 @@
     "defaultAboutText": "I'm a Fullstack software developer with experience and preference for Javascript and Typescript, and expertise in frameworks like NextJs, Express, NodeJs and Many Others. I'm a quick learner and use to collaborate closely with clients to create the solution they need,so if you're interested in working with me you can contact me."
   },
   "Tech": {
-    "subTitle": "I usually use these",
-    "mainTitle": "Technologies"
+    "mainTitle": "Technologies",
+    "subTitle": "I usually use these"
   },
   "Projects": {
-    "subTitle": "I've been building",
-    "mainTitle": "Projects"
+    "mainTitle": "Projects",
+    "subTitle": "I've been building"
   },
   "Experience": {
-    "subTitle": "My Experience",
-    "mainTitle": "I've Worked At"
+    "mainTitle": "I've Worked At",
+    "subTitle": "My Experience"
   },
   "Contact": {
-    "subTitle": "Let's Talk!",
-    "mainTitle": "Contact me"
+    "mainTitle": "Contact me",
+    "subTitle": "Let's Talk!"
   }
 }

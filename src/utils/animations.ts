@@ -83,6 +83,9 @@ export const spawnFromRight: Variants = commonAnimationDispatcher(
   "fadein"
 );
 
+export const delayedSpawnFromRight = (idx: number): Variants =>
+  commonAnimationDispatcher({ direction: "right", delay: 0.5 * idx, type: "spring", duration: 0.75 }, "fadein");
+
 /** Text Reveal Variants */
 export const textRevealVariant: Variants = commonAnimationDispatcher(
   { direction: "", type: "", delay: 0.1, duration: 1 },
