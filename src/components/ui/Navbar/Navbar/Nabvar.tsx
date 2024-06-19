@@ -33,7 +33,7 @@ export default function NavBar(): ReactNode {
 
   return (
     <div className="p-[0.4rem] sticky z-[100] bg-transparent backdrop-blur-md border-b border-b-foreground dark:border-none">
-      <nav className="w-full z-[100] rounded-lg px-2">
+      <nav className="w-full rounded-lg px-2">
         <div className="flex justify-between">
           <Link href="/" className="text-xl normal-case flex gap-1">
             <Image
