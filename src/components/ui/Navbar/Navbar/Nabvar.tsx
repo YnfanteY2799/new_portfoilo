@@ -1,7 +1,7 @@
 "use client";
 import { NavbarIcons, DropdownSwitchers } from "@/components";
 import { type ReactNode, useEffect, useState } from "react";
-import { NavOptions, SpringNavbarAnimation } from "@/utils";
+import { NavOptions, SpringNavbarAnimation, cn } from "@/utils";
 import { usePathname } from "next/navigation";
 import MobileNavbar from "./MobileNavbar.tsx";
 import { useTranslations } from "next-intl";
@@ -52,13 +52,10 @@ export default function NavBar(): ReactNode {
                 data-active={path === actualPath}
                 onMouseOver={() => setHoveredPath(path)}
                 onMouseLeave={() => setHoveredPath(actualPath)}
-                className={`transition-colors px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 hover:text-white ease-in ${
-                  path === actualPath
-                    ? hoveredPath === path
-                      ? "text-primary dark:text-zinc-200"
-                      : "text-primary"
-                    : "text-zinc-500"
-                }`}
+                className={cn(
+                  "transition-colors px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 hover:text-white light:hover:text-primary ease-in ",
+                  path === actualPath ? hoveredPath === path ? "text-primary dark:text-zinc-200" : "text-primary" : "text-green-600"//"text-zinc-500"
+                )}
               >
                 <div className="flex justify-between gap-2">
                   <NavbarIcons name={path} size={18} className="mt-1" />

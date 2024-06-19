@@ -12,8 +12,8 @@ import type { ReactNode } from "react";
 
 export default function ConfigDropdownsSwitchers({ className }: ICDSProps): ReactNode {
   // Hooks
-  const t = useTranslations("Dropdown");
   const { theme, setTheme } = useTheme();
+  const t = useTranslations("Dropdown");
   const { replace } = useRouter();
   const pathname = usePathname();
   const params = useParams();
@@ -53,7 +53,7 @@ export default function ConfigDropdownsSwitchers({ className }: ICDSProps): Reac
             key="Theme"
             onPress={onThemeChange}
             className="transition-all"
-            shortcut={theme === "dark" ? <MoonStars size={22} fill="cyan" /> : <SunHorizon size={22} fill="#8B8000" />}
+            shortcut={theme === "dark" ? <MoonStars size={20} fill="cyan" /> : <SunHorizon size={20} fill="#8B8000" />}
           >
             {t("changeTheme")}
           </DropdownItem>

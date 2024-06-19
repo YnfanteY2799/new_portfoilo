@@ -23,8 +23,8 @@ export default function ThemeSwitcher(): ReactNode {
   if (!mounted) return null;
 
   return (
-    <Button variant="flat" onPress={handleToggle} isIconOnly size="md" color="primary">
-      {theme === "light" ? <SunHorizon fill="yellow" size={20} /> : <MoonStars fill="cyan" size={20} />}
+    <Button variant="light" onPress={handleToggle} isIconOnly size="md" color="primary">
+      {theme === "light" ? <SunHorizon fill="#8B8000" size={20} /> : <MoonStars fill="cyan" size={20} />}
     </Button>
   );
 }

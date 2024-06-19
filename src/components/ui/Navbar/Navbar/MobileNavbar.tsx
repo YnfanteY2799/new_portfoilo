@@ -26,8 +26,8 @@ export default function MobileNavbar({ options = [] }: IMovileNavbarProps): Reac
         <ButtonThemeSwitcher />
       </div>
       <Divider orientation="vertical" />
-      <Button variant="flat" isIconOnly size="md" color="primary" className="mt-[2px]" onPress={handleOpen}>
-        <NavbarIcons name="menu" size={21} />
+      <Button variant="light" isIconOnly size="md" color="primary" className="mt-[2px]" onPress={handleOpen}>
+        <NavbarIcons name="menu" size={20} />
       </Button>
 
       {isOpen && (
@@ -39,23 +39,21 @@ export default function MobileNavbar({ options = [] }: IMovileNavbarProps): Reac
           className="bg-background flex h-screen flex-col gap-5 p-2 w-screen absolute top-14 left-0 overflow-hidden"
         >
           <div className="flex flex-col gap-2">
-            {options.map(({ path, routerPath }) => {
-              return (
-                <Link
-                  id={path}
-                  key={path}
-                  href={routerPath}
-                  onClick={handleOpen}
-                  className="text-foreground bg-background flex justify-between items-center gap-2 hover:bg-foreground hover:text-primary rounded-full px-6 py-4 text-xl font-medium transition-color duration-250"
-                >
-                  <div className="flex gap-2 text-xl">
-                    <NavbarIcons name={path} className="mt-[6px]" size={20} />
-                    {t(path)}
-                  </div>
-                  <NavbarIcons name="arrow_r" size={20} />
-                </Link>
-              );
-            })}
+            {options.map(({ path, routerPath }) => (
+              <Link
+                id={path}
+                key={path}
+                href={routerPath}
+                onClick={handleOpen}
+                className="text-foreground bg-background flex justify-between items-center gap-2 hover:bg-foreground hover:text-primary rounded-full px-6 py-4 text-xl font-medium transition-color duration-250"
+              >
+                <div className="flex gap-2 text-xl">
+                  <NavbarIcons name={path} className="mt-[6px]" size={20} />
+                  {t(path)}
+                </div>
+                <NavbarIcons name="arrow_r" size={20} />
+              </Link>
+            ))}
           </div>
         </motion.nav>
       )}
