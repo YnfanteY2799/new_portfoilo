@@ -1,5 +1,5 @@
 "use client";
-import { ButtonThemeSwitcher, NavbarIcons } from "@/components";
+import { ButtonThemeSwitcher, LangButtonSwitcher, NavbarIcons } from "@/components";
 import { Button, Divider } from "@nextui-org/react";
 import { type ReactNode, useState } from "react";
 import { useTranslations } from "next-intl";
@@ -24,6 +24,7 @@ export default function MobileNavbar({ options = [] }: IMovileNavbarProps): Reac
     <section className="md:hidden flex gap-2">
       <div className="mt-[2px]">
         <ButtonThemeSwitcher />
+        <LangButtonSwitcher />
       </div>
       <Divider orientation="vertical" />
       <Button variant="light" isIconOnly size="md" color="primary" className="mt-[2px]" onPress={handleOpen}>
