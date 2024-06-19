@@ -1,7 +1,7 @@
 "use client";
 import { ButtonThemeSwitcher, NavbarIcons } from "@/components";
 import { Button, Divider } from "@nextui-org/react";
-import { useState, type ReactNode } from "react";
+import { type ReactNode, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import Link from "next/link";

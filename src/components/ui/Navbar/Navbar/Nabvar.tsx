@@ -29,8 +29,6 @@ export default function NavBar(): ReactNode {
   // Effect for delete ui clipping
   useEffect(() => setHoveredPath(() => actualPath), [actualPath]);
 
-  console.log({ hoveredPath });
-
   return (
     <div className="p-[0.4rem] sticky z-[100] bg-transparent backdrop-blur-md border-b border-b-foreground dark:border-none">
       <nav className="w-full rounded-lg px-2">

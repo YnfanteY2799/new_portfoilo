@@ -1,7 +1,7 @@
 "use client";
 import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@nextui-org/react";
+import { Gear, MoonStars, SunHorizon } from "@phosphor-icons/react/dist/ssr";
 import { NortAmericanFlag, SpainFlagIcon } from "@/components";
-import { CaretDown, MoonStars, SunHorizon } from "@phosphor-icons/react/dist/ssr";
 import { useRouter, usePathname } from "@/utils";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
@@ -37,10 +37,10 @@ export default function ConfigDropdownsSwitchers({ className }: ICDSProps): Reac
       <Dropdown as="button" closeOnSelect={false}>
         <DropdownTrigger>
           <Button variant="bordered" isIconOnly size="sm" color="primary">
-            <CaretDown size={18} fill="gray" />
+            <Gear size={20} className="fill-foreground" />
           </Button>
         </DropdownTrigger>
-        <DropdownMenu variant="flat" aria-label="Web App Config Dropdown">
+        <DropdownMenu variant="flat" aria-label="Config Dropdown">
           <DropdownItem
             key="Lang"
             onPress={onLangChange}

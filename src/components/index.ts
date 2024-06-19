@@ -26,9 +26,10 @@ export { default as HeroSection } from "./sections/Hero.tsx";
 export { default as TooltipedButton } from "./ui/Buttons/TooltipedButton.tsx";
 export { default as Button } from "./ui/Buttons/FixedButtons.tsx";
 
-/* Theme Switchers */
+/* Switchers */
 export { default as DropdownSwitchers } from "./ui/Switchers/ConfigDropdownsSwitchers.tsx";
 export { default as ButtonThemeSwitcher } from "./ui/Switchers/ThemeButtonSwitcher.tsx";
+export { default as LangButtonSwitcher } from "./ui/Switchers/LangButtonSwitcher.tsx";
 
 /* Wrappers */
 export { default as BaseTiltWrapper } from "./ui/Wrappers/BaseTilt.tsx";
