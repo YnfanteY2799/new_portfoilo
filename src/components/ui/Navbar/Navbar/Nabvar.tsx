@@ -1,7 +1,7 @@
 "use client";
+import { NavOptions, SpringNavbarAnimation, cn } from "@/utils";
 import { NavbarIcons, DropdownSwitchers } from "@/components";
 import { type ReactNode, useEffect, useState } from "react";
-import { NavOptions, SpringNavbarAnimation, cn } from "@/utils";
 import { usePathname } from "next/navigation";
 import MobileNavbar from "./MobileNavbar.tsx";
 import { useTranslations } from "next-intl";
@@ -16,18 +16,20 @@ export default function NavBar(): ReactNode {
   const t = useTranslations();
 
   // Functions
-  function pathNameHandler(): string {
-    return pathname.split("/")[2] || pathname;
+  function pathnameHandler(): string {
+    return (pathname.split("/")[2] || pathname).toLowerCase();
   }
 
   // Constants
-  const actualPath = pathNameHandler();
+  const actualPath = pathnameHandler();
 
   // State
   const [hoveredPath, setHoveredPath] = useState<string>(actualPath);
 
   // Effect for delete ui clipping
   useEffect(() => setHoveredPath(() => actualPath), [actualPath]);
+
+  console.log({ hoveredPath });
 
   return (
     <div className="p-[0.4rem] sticky z-[100] bg-transparent backdrop-blur-md border-b border-b-foreground dark:border-none">
@@ -54,7 +56,8 @@ export default function NavBar(): ReactNode {
                 onMouseLeave={() => setHoveredPath(actualPath)}
                 className={cn(
                   "transition-colors px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 hover:text-white light:hover:text-primary ease-in ",
-                  path === actualPath ? hoveredPath === path ? "text-primary dark:text-zinc-200" : "text-primary" : "text-green-600"//"text-zinc-500"
+                  path === actualPath ? "text-primary dark:text-zinc-200" : "text-primary",
+                  path === hoveredPath ? "text-gray-900 dark:text-zinc-200" : "text-primary"
                 )}
               >
                 <div className="flex justify-between gap-2">

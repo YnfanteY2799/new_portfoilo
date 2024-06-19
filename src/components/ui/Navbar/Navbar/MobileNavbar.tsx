@@ -49,7 +49,7 @@ export default function MobileNavbar({ options = [] }: IMovileNavbarProps): Reac
               >
                 <div className="flex gap-2 text-xl">
                   <NavbarIcons name={path} className="mt-[6px]" size={20} />
-                  {t(path)}
+                  <span className="capitalize">{t(path)}</span>
                 </div>
                 <NavbarIcons name="arrow_r" size={20} />
               </Link>
