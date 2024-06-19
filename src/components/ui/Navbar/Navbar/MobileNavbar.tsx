@@ -22,13 +22,13 @@ export default function MobileNavbar({ options = [] }: IMovileNavbarProps): Reac
 
   return (
     <section className="md:hidden flex gap-2">
-      <div className="mt-[2px]">
+      <div className="mt-[2px] flex gap-2">
         <ButtonThemeSwitcher />
         <LangButtonSwitcher />
       </div>
       <Divider orientation="vertical" />
-      <Button variant="light" isIconOnly size="md" color="primary" className="mt-[2px]" onPress={handleOpen}>
-        <NavbarIcons name="menu" size={20} />
+      <Button variant="light" isIconOnly size="md" color="primary" className="mt-[2px] transition-all" onPress={handleOpen}>
+        <NavbarIcons name={isOpen ? "close" : "menu"} size={20} />
       </Button>
 
       {isOpen && (
@@ -37,7 +37,7 @@ export default function MobileNavbar({ options = [] }: IMovileNavbarProps): Reac
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ ease: "easeInOut", duration: 0.65 }}
-          className="bg-background flex h-screen flex-col gap-5 p-2 w-screen absolute top-14 left-0 overflow-hidden"
+          className="bg-background flex h-screen flex-col gap-5 p-2 w-screen fixed top-14 left-0 overflow-hidden"
         >
           <div className="flex flex-col gap-2">
             {options.map(({ path, routerPath }) => (
@@ -46,10 +46,10 @@ export default function MobileNavbar({ options = [] }: IMovileNavbarProps): Reac
                 key={path}
                 href={routerPath}
                 onClick={handleOpen}
-                className="text-foreground bg-background flex justify-between items-center gap-2 hover:bg-foreground hover:text-primary rounded-full px-6 py-4 text-xl font-medium transition-color duration-250"
+                className="text-foreground bg-background flex justify-between items-center gap-2 hover:bg-foreground hover:text-primary rounded-full px-5 py-4 text-xl font-medium transition-color duration-250"
               >
                 <div className="flex gap-2 text-xl">
-                  <NavbarIcons name={path} className="mt-[6px]" size={20} />
+                  <NavbarIcons name={path} className="mt-[5px]" size={20} />
                   <span className="capitalize">{t(path)}</span>
                 </div>
                 <NavbarIcons name="arrow_r" size={20} />

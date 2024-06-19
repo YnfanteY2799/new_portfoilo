@@ -1,4 +1,5 @@
 import {
+  X,
   List,
   Code,
   Info,
@@ -33,6 +34,8 @@ export default function NavbarIcons({ name = "", size, className }: ICommonIconP
       return <AddressBook size={size} className={className} />;
     case "arrow_r":
       return <CaretRight size={size} className={className} />;
+    case "close":
+      return <X size={size} className={className} />;
     default:
       return <></>;
   }
