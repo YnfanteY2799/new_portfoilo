@@ -45,7 +45,7 @@ export default function ConfigDropdownsSwitchers({ className }: ICDSProps): Reac
             key="Lang"
             onPress={onLangChange}
             className="transition-all"
-            shortcut={currLocale === "es" ? <SpainFlagIcon /> : <NortAmericanFlag />}
+            shortcut={currLocale === "es" ? <SpainFlagIcon size={20} /> : <NortAmericanFlag size={20} />}
           >
             {t("change")}
           </DropdownItem>
