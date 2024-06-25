@@ -115,5 +115,7 @@ export interface IServiceCardProps {
 }
 
 export interface InterviewedBaseDivProps {
+  id?: string;
+  className?: string;
   children?: ReactNode;
 }

@@ -32,6 +32,7 @@ export { default as ButtonThemeSwitcher } from "./ui/Switchers/ThemeButtonSwitch
 export { default as LangButtonSwitcher } from "./ui/Switchers/LangButtonSwitcher.tsx";
 
 /* Wrappers */
+export { default as InterviewedSection } from "./ui/Wrappers/InterviewedBaseDiv.tsx";
 export { default as BaseTiltWrapper } from "./ui/Wrappers/BaseTilt.tsx";
 export { default as SectionWrapper } from "./ui/Wrappers/Section.tsx";
 
