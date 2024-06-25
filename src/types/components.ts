@@ -113,3 +113,7 @@ export interface IServiceCardProps {
   title: string;
   click: Function;
 }
+
+export interface InterviewedBaseDivProps {
+  children?: ReactNode;
+}

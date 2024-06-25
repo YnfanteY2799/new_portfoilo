@@ -15,10 +15,7 @@ export default function AboutSection({ mainText, categories, isLoading = true }:
       <SectionText>{mainText ? mainText : t("defaultAboutText")}</SectionText>
       <div className="flex flex-wrap mt-10 gap-4">
         {(categories ?? [1, 2, 3, 4]).map((data, idx) => (
-          <div key={idx} >
-            Some Says
-
-          </div>
+          <div key={idx}>Some Says</div>
         ))}
       </div>
     </SectionWrapper>

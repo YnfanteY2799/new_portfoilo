@@ -4,17 +4,17 @@ import type { IGenericIconSvg } from "@/types";
 export default function SpainFlag({ size = 24, className }: IGenericIconSvg): ReactElement {
   return (
     <svg
-      id="Flag"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
       x="0px"
       y="0px"
+      id="Flag"
       width={size}
+      version="1.1"
       height={size}
+      xmlSpace="preserve"
       className={className}
       viewBox="0 0 1990 1050"
-      xmlSpace="preserve"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <g>
         <rect x="0.035" y="3.933" fill="#FFFFFF" width="1989.965" height="1042.192" />
