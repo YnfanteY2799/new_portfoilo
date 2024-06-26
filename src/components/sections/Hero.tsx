@@ -47,6 +47,7 @@ export default function HeroSection(): ReactNode {
 
         <div className="w-5/6 lg:max-w-lg lg:w-full md:w-1/2">
           <Image
+            priority
             width={1200}
             height={200}
             loading="eager"

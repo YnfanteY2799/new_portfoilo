@@ -1,5 +1,7 @@
 "use client";
 import { type ReactNode, useRef, useEffect, useState } from "react";
+import { useRouter } from "@/utils";
+
 import type { InterviewedBaseDivProps } from "@/types";
 
 export default function InterviewedSection({ children, className, id }: InterviewedBaseDivProps): ReactNode {
@@ -7,10 +9,13 @@ export default function InterviewedSection({ children, className, id }: Intervie
   const [isVisible, setIsVisible] = useState(false);
 
   // Base Ref
-  const InterviewedRef = useRef(null);
+  const interviewedRef = useRef(null);
+
+  // Hooks
+  const { push } = useRouter();
 
   useEffect(() => {
-    const currInterviewed = InterviewedRef.current;
+    const currInterviewed = interviewedRef.current;
     if (currInterviewed) {
       const observer = new IntersectionObserver(([{ isIntersecting }]) => setIsVisible(isIntersecting), {
         root: null,
@@ -22,10 +27,13 @@ export default function InterviewedSection({ children, className, id }: Intervie
     }
   }, []);
 
-  console.log({ isVisible, id });
+  useEffect(() => {
+    // @ts-expect-error
+    if (isVisible) push(`#${id}`);
+  }, [isVisible]);
 
   return (
-    <div className={className} ref={InterviewedRef} id={id}>
+    <div className={className} ref={interviewedRef} id={id}>
       {children}
     </div>
   );
