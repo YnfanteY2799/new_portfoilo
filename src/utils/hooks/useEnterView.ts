@@ -2,7 +2,7 @@
 import { type RefObject, useEffect, useState } from "react";
 
 /** PENDING: documentation */
-export default function useEnterView({ current }: RefObject<HTMLDivElement | null>, rootMargin = "0px"): Boolean {
+export default function useEnterView(incomingRef: RefObject<HTMLDivElement | null>, rootMargin = "0px"): Boolean {
   // State
   const [isVisible, setState] = useState<boolean>(false);
 
@@ -14,10 +14,11 @@ export default function useEnterView({ current }: RefObject<HTMLDivElement | nul
 
   // Effect
   useEffect(() => {
-    if (current) {
-      const observer = new IntersectionObserver(([{ isIntersecting }]) => setState(isIntersecting), intersecObj);
-      observer.observe(current);
-      return () => observer.unobserve(current);
+    const curr = incomingRef.current;
+    if (curr) {
+      const observer = new IntersectionObserver(([{ isIntersecting }]) => setState(() => isIntersecting), intersecObj);
+      observer.observe(curr);
+      return () => observer.unobserve(curr);
     }
   }, []);
 

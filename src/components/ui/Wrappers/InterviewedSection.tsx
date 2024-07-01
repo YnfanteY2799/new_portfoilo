@@ -29,7 +29,7 @@ export default function InterviewedSection({ children, className, id }: Intervie
 
   useEffect(() => {
     // @ts-expect-error
-    if (isVisible) push(`#${id}`);
+    if (isVisible) push(`#${id === "Hero" ? "" : id}`);
   }, [isVisible]);
 
   return (
