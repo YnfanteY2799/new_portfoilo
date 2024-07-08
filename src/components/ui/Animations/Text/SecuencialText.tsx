@@ -12,7 +12,7 @@ export default function TextGenerateEffect({ words, duration }: ISecuentialTextP
   const wordsArray = (words ?? "").split("");
 
   // Animate Destructuring
-  const { current } = scope;
+  const { current } = scope; 
 
   // Effects
   useEffect(() => {
