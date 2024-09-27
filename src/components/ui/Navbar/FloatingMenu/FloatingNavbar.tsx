@@ -56,14 +56,14 @@ export default function FloatingMenu({ sections = [] }: IFloatingMenuProps): Rea
             key={id}
             href={`#${id}`}
             onClick={handleShowMenu}
-            className={cn(floatingMenuItem, activeSection === id ? "text-primary" : "hover:text-orange-500")}
+            className={cn(floatingMenuItem, activeSection === id ? "text-primary" : "hover:text-orange-500 transition-all")}
           >
             <FloatingIcons size={20} name={icon} className="mt-1" />
             <small className="text-xs font-medium text-center">{t(name)}</small>
           </a>
         ))
       ) : (
-        <button className="flex flex-col items-center justify-center text-primary">
+        <button className="flex flex-col items-center justify-center text-primary transition-all">
           <FloatingIcons name="menu" size={20} />
         </button>
       )}
