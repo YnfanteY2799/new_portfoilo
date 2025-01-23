@@ -1,4 +1,4 @@
-import { commonAnimationDispatcher } from "./functions";
+import { commonAnimationDispatcher } from "./functions.ts";
 
 import type { Transition, Variants } from "framer-motion";
 

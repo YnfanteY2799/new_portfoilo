@@ -1,13 +1,7 @@
-import { type ClassValue, clsx } from "clsx";
-import { GenerableChars } from "./constants";
-import { twMerge } from "tailwind-merge";
+import { GenerableChars } from "./constants.ts";
 
 import type { CommonAnimationProps } from "@/types";
 import type { Variants } from "framer-motion";
-
-export function cn(...inputs: ClassValue[]): string {
-  return twMerge(clsx(inputs));
-}
 
 export function commonAnimationDispatcher(config: CommonAnimationProps, str: string): Variants {
   switch (str.toLocaleLowerCase()) {

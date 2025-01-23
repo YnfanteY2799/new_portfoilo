@@ -1,5 +1,5 @@
 import { CommonProviders, Navbar } from "@/components";
-import localFont from "next/font/local";
+import { ArigatouGozaimasuFont } from "@/fonts";
 import "@/css/globals.css";
 
 import type { ICommonLayoutProp } from "@/types";
@@ -18,19 +18,10 @@ export const viewport: Viewport = {
   ],
 };
 
-const currentFont = localFont({
-  src: "../../fonts/ArigatouGozaimasu.otf",
-  variable: "--font-local",
-  preload: true,
-});
-
-export default function RootLayout({ children, params }: Readonly<ICommonLayoutProp>): ReactNode {
-  // Prop destructuring
-  const { locale = "en" } = params;
-
+export default function RootLayout({ children, params: { locale = "en" } }: Readonly<ICommonLayoutProp>): ReactNode {
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${currentFont.variable}`}>
+      <body className={`${ArigatouGozaimasuFont.variable}`}>
         <CommonProviders>
           <Navbar />
           {children}
