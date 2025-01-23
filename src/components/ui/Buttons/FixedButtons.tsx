@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, type ButtonProps } from "@nextui-org/react";
+import { Button, type ButtonProps } from "@heroui/react";
 
 import type { ReactNode } from "react";
 

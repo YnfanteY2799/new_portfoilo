@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import type { ISectionHeadProps } from "@/types";
 import type { ReactNode } from "react";
-import { Spinner } from "@nextui-org/react";
+import { Spinner } from "@heroui/react";
 
 export default function SectionHeader({ head, subHead, moreDetails, isLoading }: ISectionHeadProps): ReactNode {
   return (

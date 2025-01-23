@@ -5,7 +5,7 @@ import { type ReactNode, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import MobileNavbar from "./MobileNavbar.tsx";
 import { useTranslations } from "next-intl";
-import { Divider } from "@nextui-org/react";
+import { Divider } from "@heroui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";

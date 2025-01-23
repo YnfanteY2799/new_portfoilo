@@ -17,14 +17,14 @@ const nextConfig = withBundleAnalyzer(
     },
     redirects: async () => [
       {
-        source: "/",
         destination: "/en/Home",
         permanent: true,
+        source: "/",
       },
       {
-        source: "/Home",
         destination: "/en/Home",
         permanent: true,
+        source: "/Home",
       },
     ],
   })

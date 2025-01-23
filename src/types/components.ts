@@ -1,4 +1,4 @@
-import type { ButtonProps, TooltipPlacement } from "@nextui-org/react";
+import type { ButtonProps, TooltipPlacement } from "@heroui/react";
 import type { TFloatingNavOptions, TNavOption } from "./index.ts";
 import type { MotionValue, Variants } from "framer-motion";
 import type { ReactNode } from "react";

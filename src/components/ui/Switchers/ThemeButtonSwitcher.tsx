@@ -1,7 +1,7 @@
 "use client";
 import { MoonStars, SunHorizon } from "@phosphor-icons/react";
 import { type ReactNode, useEffect, useState } from "react";
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 import { useTheme } from "next-themes";
 
 export default function ThemeSwitcher(): ReactNode {

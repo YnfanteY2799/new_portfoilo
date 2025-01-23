@@ -1,6 +1,6 @@
 "use client";
 import { ButtonThemeSwitcher, LangButtonSwitcher, NavbarIcons } from "@/components";
-import { Button, Divider } from "@nextui-org/react";
+import { Button, Divider } from "@heroui/react";
 import { type ReactNode, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";

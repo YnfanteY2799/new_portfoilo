@@ -2,7 +2,7 @@
 import { NortAmericanFlag, SpainFlagIcon } from "@/components";
 import { usePathname, useRouter } from "@/utils";
 import { useParams } from "next/navigation";
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 
 import type { ReactNode } from "react";
 

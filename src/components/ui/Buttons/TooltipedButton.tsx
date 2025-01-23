@@ -1,5 +1,5 @@
 "use client";
-import { Button, Tooltip } from "@nextui-org/react";
+import { Button, Tooltip } from "@heroui/react";
 import { SocialsIcons } from "@/components";
 import Link from "next/link";
 

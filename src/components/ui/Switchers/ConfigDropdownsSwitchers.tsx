@@ -1,5 +1,5 @@
 "use client";
-import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@nextui-org/react";
+import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@heroui/react";
 import { Gear, MoonStars, SunHorizon } from "@phosphor-icons/react/dist/ssr";
 import { NortAmericanFlag, SpainFlagIcon } from "@/components";
 import { useRouter, usePathname } from "@/utils";
